@@ -31,7 +31,7 @@ jobs:
       - name: "🧹 Run flake8 lint"
         run: |
           pip install flake8
-          flake8 app rag tests
+          flake8 --max-line-length=120 app rag tests
 
       - name: "🐳 Build Docker image"
         run:         docker build -t mediask .
