@@ -183,6 +183,38 @@ Run the standard-library test suite from the repository root:
 python -m unittest discover -s tests -v
 ```
 
+## RAG evaluation
+
+Keep evaluation data in `evaluation\questions.jsonl`, not in `data\`, because
+all supported files in `data\` are indexed by the ingestion pipeline. The
+evaluator accepts either a JSON array or one JSON object per line. Each case
+contains a question, expected source names, and a reference answer:
+
+```json
+{"question":"What are common side effects of ibuprofen?","expected_sources":["ibuprofen.pdf"],"reference_answer":"Common side effects can include stomach pain, nausea, vomiting, indigestion, and diarrhea."}
+```
+
+With FastAPI running and the relevant medical files indexed, run:
+
+```powershell
+python evaluation\run_evaluation.py
+```
+
+Use a different API URL or dataset when needed:
+
+```powershell
+python evaluation\run_evaluation.py `
+  --api-url http://localhost:8000 `
+  --dataset evaluation\questions.jsonl
+```
+
+The evaluator uses only Python's standard library and reports answer token
+overlap, expected-source matches, average latency, p95 latency, and request
+failures. Token overlap is a lightweight comparison, not a medical correctness
+score; review answers with a qualified evaluator. Since `/ask` currently
+returns source text instead of source filenames, expected-source matching is
+informative only when filenames are present in the returned text.
+
 ## Safety and limitations
 
 MediAsk is an educational information-retrieval tool, not a medical

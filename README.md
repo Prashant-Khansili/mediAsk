@@ -203,6 +203,23 @@ curl -X POST http://127.0.0.1:8000/ask \
      -d '{"query": "What are the side effects of ibuprofen?"}'
 ```
 
+### 📊 Evaluate the RAG pipeline
+
+Evaluation cases live in `evaluation\questions.jsonl`, outside `data\`, so
+they are not indexed as medical documents. The evaluator accepts either a JSON
+array or one JSON object per line. Start the API, ensure the relevant
+medical files are indexed, and run:
+
+```powershell
+python evaluation\run_evaluation.py
+```
+
+The script reports completed cases, failures, answer token overlap against the
+reference answers, expected-source matches, average latency, and p95 latency.
+The source metric is limited because `/ask` currently returns source text
+rather than source filenames; use it only when the expected filename appears
+in the returned source text.
+
 ---
 
 ## 📬 Example Query

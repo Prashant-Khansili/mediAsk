@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What is the active ingredient in Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The active ingredient is acetaminophen."
+  },
+  {
+    "question": "What is the route of administration for Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is intended for intravenous infusion."
+  },
+  {
+    "question": "What is the initial U.S. approval year listed for acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The initial U.S. approval year listed is 1951."
+  },
+  {
+    "question": "What types of pain are covered by the injection's indications?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is indicated for mild to moderate pain, and for moderate to severe pain when used with adjunctive opioid analgesics."
+  },
+  {
+    "question": "For which pediatric age group is the injection indicated for pain management?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is indicated for pain management in pediatric patients 2 years of age and older."
+  },
+  {
+    "question": "Is Acetaminophen Injection indicated for fever reduction?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Yes. It is indicated for reduction of fever in adults and pediatric patients."
+  },
+  {
+    "question": "How long should an intravenous infusion of Acetaminophen Injection take?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It should be administered over 15 minutes."
+  },
+  {
+    "question": "Can Acetaminophen Injection be given as a single dose or repeated doses?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It may be given as a single dose or repeated doses for acute pain or fever."
+  },
+  {
+    "question": "What is the maximum daily dose for adults and adolescents weighing at least 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum total daily dose is 4,000 mg from all routes and all acetaminophen-containing products."
+  },
+  {
+    "question": "What dosing schedules are listed for adults and adolescents weighing at least 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The listed schedules are 1,000 mg every 6 hours or 650 mg every 4 hours."
+  },
+  {
+    "question": "What is the maximum single dose for adults and adolescents weighing at least 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum single dose is 1,000 mg."
+  },
+  {
+    "question": "What is the minimum dosing interval for adults and adolescents weighing at least 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The minimum dosing interval is 4 hours."
+  },
+  {
+    "question": "What is the recommended dose for adults and adolescents under 50 kg when dosed every 6 hours?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The recommended dose is 15 mg/kg every 6 hours."
+  },
+  {
+    "question": "What is the recommended dose for adults and adolescents under 50 kg when dosed every 4 hours?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The recommended dose is 12.5 mg/kg every 4 hours."
+  },
+  {
+    "question": "What is the maximum daily dose for adults and adolescents weighing under 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum daily dose is 75 mg/kg per day, including all routes and acetaminophen-containing products."
+  },
+  {
+    "question": "What is the maximum single dose for adults and adolescents weighing under 50 kg?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum single dose is 15 mg/kg."
+  },
+  {
+    "question": "What dosing schedules are recommended for children aged 2 to 12 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The recommended schedules are 15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours."
+  },
+  {
+    "question": "What is the maximum daily dose for children aged 2 to 12 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum daily dose is 75 mg/kg per day."
+  },
+  {
+    "question": "What is the maximum single dose for children aged 2 to 12 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum single dose is 15 mg/kg."
+  },
+  {
+    "question": "What is the minimum dosing interval for children aged 2 to 12 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The minimum dosing interval is 4 hours."
+  },
+  {
+    "question": "What dose is recommended for neonates from birth through 28 days?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The recommended dose is 12.5 mg/kg every 6 hours."
+  },
+  {
+    "question": "What is the maximum daily dose for neonates from birth through 28 days?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum daily dose for neonates is 50 mg/kg per day."
+  },
+  {
+    "question": "What is the minimum dosing interval for neonates?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The minimum dosing interval is 6 hours."
+  },
+  {
+    "question": "What dose is recommended for infants aged 29 days to 2 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The recommended dose is 15 mg/kg every 6 hours."
+  },
+  {
+    "question": "What is the maximum daily dose for infants aged 29 days to 2 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum daily dose is 60 mg/kg per day."
+  },
+  {
+    "question": "What gestational-age condition is specified for premature neonates covered by the neonatal dosing recommendation?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The neonatal recommendation includes premature neonates born at a gestational age of at least 32 weeks."
+  },
+  {
+    "question": "What is the concentration of the supplied injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The concentration is 10 mg/mL."
+  },
+  {
+    "question": "How much acetaminophen is contained in each 100 mL bag?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Each 100 mL bag contains 1,000 mg of acetaminophen."
+  },
+  {
+    "question": "What is the appearance of Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is described as a sterile, clear, colorless, non-pyrogenic, preservative-free, isotonic formulation."
+  },
+  {
+    "question": "What is the injection contraindicated for in relation to allergy?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is contraindicated in patients with known hypersensitivity to acetaminophen or to any excipient in the intravenous formulation."
+  },
+  {
+    "question": "What liver-related conditions are contraindications?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Severe hepatic impairment and severe active liver disease are contraindications."
+  },
+  {
+    "question": "What serious risk can result from doses higher than recommended?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Doses higher than recommended may cause hepatic injury, including liver failure and death."
+  },
+  {
+    "question": "Which sources must be included when calculating the maximum daily acetaminophen dose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "All routes of administration and all acetaminophen-containing products, including combination products, must be included."
+  },
+  {
+    "question": "Which patient conditions require caution when administering acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Caution is advised in hepatic impairment or active hepatic disease, alcoholism, chronic malnutrition, severe hypovolemia, and severe renal impairment."
+  },
+  {
+    "question": "What renal-function threshold is used to define severe renal impairment in the warning?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Severe renal impairment is identified as creatinine clearance less than or equal to 30 mL/min."
+  },
+  {
+    "question": "What should be done at the first appearance of a skin rash?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Use of the drug should be discontinued at the first appearance of a skin rash or another sign of hypersensitivity."
+  },
+  {
+    "question": "Which serious skin reactions are identified in the labeling?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The listed serious skin reactions are acute generalized exanthematous pustulosis (AGEP), Stevens-Johnson Syndrome (SJS), and toxic epidermal necrolysis (TEN)."
+  },
+  {
+    "question": "What allergy-related symptoms have been reported after acetaminophen use?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Reported signs include swelling of the face, mouth, and throat; respiratory distress; urticaria; rash; and pruritus."
+  },
+  {
+    "question": "What action is required if symptoms of allergy or hypersensitivity occur?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Acetaminophen Injection should be discontinued immediately."
+  },
+  {
+    "question": "What medication-measurement error is specifically highlighted?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The dose in milligrams (mg) must not be confused with the dose volume in milliliters (mL)."
+  },
+  {
+    "question": "For which patients must dosing be based on weight?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Dosing must be based on weight for patients weighing under 50 kg."
+  },
+  {
+    "question": "What equipment-programming precaution is specified?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Infusion pumps must be properly programmed."
+  },
+  {
+    "question": "What is the most common serious adverse effect of acute acetaminophen overdosage described in the label?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The most serious adverse effect is dose-dependent, potentially fatal hepatic necrosis."
+  },
+  {
+    "question": "What other complications may occur in acute acetaminophen overdosage?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Renal tubular necrosis, hypoglycemic coma, and thrombocytopenia may also occur."
+  },
+  {
+    "question": "What early symptoms may follow a potentially hepatotoxic overdose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Early symptoms may include nausea, vomiting, diaphoresis, and general malaise."
+  },
+  {
+    "question": "How long may it take for clinical and laboratory evidence of hepatic toxicity to appear?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Evidence of hepatic toxicity may not become apparent until 48 to 72 hours after ingestion."
+  },
+  {
+    "question": "When should a serum acetaminophen assay be obtained after an oral ingestion?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It should be obtained as soon as possible, but no sooner than 4 hours after oral ingestion."
+  },
+  {
+    "question": "How often should liver function studies be repeated during overdose evaluation?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Liver function studies should initially be obtained and then repeated at 24-hour intervals."
+  },
+  {
+    "question": "What antidote is identified for acetaminophen overdose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The identified antidote is N-acetylcysteine (NAC), which should be administered as early as possible."
+  },
+  {
+    "question": "Which nomogram is mentioned as a guide for acute ingestion treatment?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The Rumack-Matthew nomogram is mentioned."
+  },
+  {
+    "question": "What serum acetaminophen concentration at 4 hours corresponds to the lower toxic line on the nomogram?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The lower toxic line corresponds to 150 mcg/mL at 4 hours."
+  },
+  {
+    "question": "What serum acetaminophen concentration at 12 hours corresponds to the lower toxic line?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The lower toxic line corresponds to 37.5 mcg/mL at 12 hours."
+  },
+  {
+    "question": "What should be done if the serum acetaminophen level is above the lower line on the nomogram?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The entire course of NAC treatment should be administered."
+  },
+  {
+    "question": "What does the label advise if the serum acetaminophen level is below the lower line?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It states to withhold NAC therapy if the level is below the lower line."
+  },
+  {
+    "question": "Which phone number is provided for additional overdose information?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The label provides the poison control center number 1-800-222-1222."
+  },
+  {
+    "question": "What are the most common adverse reactions reported in adults?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The most common adult adverse reactions are nausea, vomiting, headache, and insomnia."
+  },
+  {
+    "question": "What are the most common adverse reactions reported in pediatric patients?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The most common pediatric adverse reactions are nausea, vomiting, constipation, and pruritus."
+  },
+  {
+    "question": "How many adult patients received Acetaminophen Injection in the clinical trials described?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "A total of 1,020 adult patients received Acetaminophen Injection in the clinical trials described."
+  },
+  {
+    "question": "What percentage of adult trial participants received five or more doses?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "37.3% (380 patients) received five or more doses."
+  },
+  {
+    "question": "What percentage of adult trial participants received more than ten doses?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "17.0% (173 patients) received more than ten doses."
+  },
+  {
+    "question": "How many pediatric patients received Acetaminophen Injection in the clinical trials described?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "A total of 483 pediatric patients received Acetaminophen Injection."
+  },
+  {
+    "question": "What pediatric age-group counts are provided for the 483 patients?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The group included 72 neonates, 167 infants, 171 children, and 73 adolescents."
+  },
+  {
+    "question": "What additional adult adverse reactions were reported at an incidence of at least 1% and greater than placebo?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "They included anemia, fatigue, infusion-site pain, peripheral edema, increased aspartate aminotransferase, abnormal breath sounds, hypokalemia, muscle spasms, trismus, anxiety, dyspnea, hypertension, and hypotension."
+  },
+  {
+    "question": "What additional pediatric adverse reactions were reported at an incidence of at least 1%?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "They included anemia, diarrhea, pyrexia, injection-site pain, hypokalemia, hypomagnesemia, hypoalbuminemia, hypophosphatemia, muscle spasm, headache, agitation, oliguria, atelectasis, pleural effusion, pulmonary edema, stridor, wheezing, hypotension, and hypertension."
+  },
+  {
+    "question": "Which enzyme may be induced or regulated by other substances in a way that affects acetaminophen metabolism?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Hepatic cytochrome enzyme CYP2E1 may be induced or regulated by other substances."
+  },
+  {
+    "question": "What effect may CYP2E1-inducing or regulating substances have on acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "They may alter acetaminophen metabolism and increase its hepatotoxic potential."
+  },
+  {
+    "question": "What does the label say about the clinical consequences of CYP2E1-related effects?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The clinical consequences of these effects have not been established."
+  },
+  {
+    "question": "What interaction is described between chronic acetaminophen use and warfarin?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Chronic oral acetaminophen use at 4,000 mg/day has been shown to increase the INR in some patients stabilized on sodium warfarin."
+  },
+  {
+    "question": "What monitoring may be appropriate when acetaminophen injection is used short-term in patients taking oral anticoagulants?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "More frequent assessment of INR may be appropriate; the label notes that studies of short-term injection use in such patients have not been performed."
+  },
+  {
+    "question": "What does the label report about epidemiological studies of oral acetaminophen use during pregnancy?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Published epidemiological studies have not reported a clear association with birth defects, miscarriage, or adverse maternal or fetal outcomes."
+  },
+  {
+    "question": "Have animal reproduction studies been conducted with intravenous acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "No. The label states that animal reproduction studies have not been conducted with IV acetaminophen."
+  },
+  {
+    "question": "What limitations does the label note about pregnancy studies?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The studies cannot definitely establish the absence of risk because of methodological limitations, including recall bias."
+  },
+  {
+    "question": "What percentage of neonatal weight-adjusted maternal dose was reported as the average exposure through milk after a single oral 1-gram dose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The reported average neonatal dose was 1% of the weight-adjusted maternal dose."
+  },
+  {
+    "question": "What maximum neonatal exposure through milk was reported after a single oral 1-gram dose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The reported maximum neonatal dose was 2% of the weight-adjusted maternal dose."
+  },
+  {
+    "question": "What breastfeeding-related infant reaction is described in the label?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "One well-documented report described a rash in a breastfed infant that resolved when the mother stopped acetaminophen and recurred when she resumed it."
+  },
+  {
+    "question": "What should be considered when a breastfeeding mother needs Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The benefits of breastfeeding should be considered along with the mother's clinical need for the injection and potential adverse effects on the breastfed infant."
+  },
+  {
+    "question": "What does the label say about fertility effects based on animal data?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Animal data indicate that acetaminophen use may cause reduced fertility in males and females of reproductive potential; whether these effects are reversible is unknown."
+  },
+  {
+    "question": "What reproductive effects were reported in male animals at doses 1.2 times the maximum human daily dose or greater?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Reports included decreased testicular weights, reduced spermatogenesis, and reduced fertility."
+  },
+  {
+    "question": "What reproductive effect was reported in female animals at the same dose levels?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Reduced implantation sites were reported."
+  },
+  {
+    "question": "At what pediatric age is effectiveness for treatment of acute pain not established?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Effectiveness for acute pain has not been established in pediatric patients younger than 2 years."
+  },
+  {
+    "question": "What evidence supports use for acute pain in pediatric patients aged 2 years and older?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It is supported by adequate and well-controlled adult studies and safety and pharmacokinetic data from adults and 483 pediatric patients across age groups."
+  },
+  {
+    "question": "Was analgesic efficacy demonstrated in the cited study of children younger than 2 years?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "No difference in analgesic effect was observed between opioid plus intravenous acetaminophen and opioid plus placebo in the described study."
+  },
+  {
+    "question": "What evidence supports use for fever in pediatric patients, including certain premature neonates?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The label cites adequate and well-controlled adult studies, clinical studies in 244 pediatric patients aged 2 years and older, and safety and pharmacokinetic data from 239 patients younger than 2 years, including neonates born at 32 weeks gestational age or later."
+  },
+  {
+    "question": "What proportion of clinical-trial subjects were aged 65 years and older?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "15% of subjects were aged 65 years and older."
+  },
+  {
+    "question": "What proportion of clinical-trial subjects were aged 75 years and older?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "5% of subjects were aged 75 years and older."
+  },
+  {
+    "question": "Were overall safety or effectiveness differences observed between geriatric and younger subjects?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "No overall differences in safety or effectiveness were observed, although greater sensitivity in some older individuals cannot be ruled out."
+  },
+  {
+    "question": "What dosing consideration may apply to patients with hepatic impairment?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "A reduced total daily dose may be warranted, and acetaminophen is contraindicated in severe hepatic impairment or severe active liver disease."
+  },
+  {
+    "question": "What dosing consideration may apply to patients with severe renal impairment?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Longer dosing intervals and a reduced total daily dose may be warranted."
+  },
+  {
+    "question": "What is the chemical name of acetaminophen given in the description section?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Its chemical name is N-acetyl-p-aminophenol."
+  },
+  {
+    "question": "What is the molecular weight of acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The molecular weight is 151.16."
+  },
+  {
+    "question": "What is the approximate pH of Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The approximate pH is 5.5."
+  },
+  {
+    "question": "What is the approximate osmolality of Acetaminophen Injection?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The approximate osmolality is 290 mOsm/kg."
+  },
+  {
+    "question": "Which ingredients are listed in each 100 mL of the formulation besides acetaminophen?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The listed ingredients are anhydrous citric acid, sodium chloride, and water for injection; pH is adjusted with hydrochloric acid and/or sodium hydroxide."
+  },
+  {
+    "question": "What is stated about the precise mechanism of acetaminophen's analgesic and antipyretic properties?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The precise mechanism is not established, but it is thought to primarily involve central actions."
+  },
+  {
+    "question": "What pharmacological activities has acetaminophen demonstrated?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It has demonstrated analgesic and antipyretic activities in animal and human studies."
+  },
+  {
+    "question": "When does the maximum plasma concentration occur after intravenous administration?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The maximum concentration occurs at the end of the 15-minute intravenous infusion."
+  },
+  {
+    "question": "How does the Cmax after intravenous injection compare with the same oral dose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "The Cmax after intravenous administration is up to 70% higher than after the same oral dose."
+  },
+  {
+    "question": "How does overall exposure after intravenous injection compare with the same oral dose?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Overall exposure, measured by area under the concentration-time curve (AUC), is very similar."
+  },
+  {
+    "question": "What percentage range of acetaminophen is bound to plasma proteins at therapeutic levels?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "Protein binding is low, ranging from 10% to 25%."
+  },
+  {
+    "question": "How is acetaminophen distributed through body tissues?",
+    "expected_sources": [
+      "file.pdf"
+    ],
+    "reference_answer": "It appears to be widely distributed throughout most body tissues except fat."
+  }
+]

@@ -21,7 +21,7 @@ data/*.txt
 *.log
 *.tmp
 *.bak
-
+evlaution/questions.jsonl
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
 
