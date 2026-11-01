@@ -80,6 +80,63 @@ sends these values in request headers to `/ask`; the application does not
 write them to `.env` or persist them to disk. Use HTTPS when the UI and API
 communicate across an untrusted network.
 
+## Run the API with Docker
+
+The Dockerfile packages the FastAPI backend and exposes port `8000`. It does
+not package or start Streamlit, so run the UI locally in a separate terminal.
+From the repository root, build the image:
+
+```powershell
+docker build -t mediask .
+```
+
+Start the API container:
+
+```powershell
+docker run --name mediask-api -p 8000:8000 mediask
+```
+
+Verify the containerized API:
+
+```powershell
+curl.exe http://localhost:8000/
+```
+
+Then start Streamlit locally:
+
+```powershell
+$env:MEDIGUIDE_API_URL = "http://localhost:8000"
+streamlit run app\ui.py
+```
+
+For persistent local data and indexes, mount the project directories into the
+container. PowerShell uses the backtick for multiline commands:
+
+```powershell
+docker run --name mediask-api `
+  -p 8000:8000 `
+  -v "${PWD}\data:/app/data" `
+  -v "${PWD}\rag\faiss_index:/app/rag/faiss_index" `
+  mediask
+```
+
+With these mounts, uploaded files remain in the local `data\` directory and
+the generated FAISS files remain in `rag\faiss_index\` when the container is
+removed.
+
+Useful lifecycle commands:
+
+```powershell
+docker logs -f mediask-api
+docker stop mediask-api
+docker start mediask-api
+docker rm mediask-api
+```
+
+Run `docker rm mediask-api` only after stopping the container. If Docker
+reports that the name is already in use, stop and remove the existing
+container before creating another one with that name.
+
 ## API
 
 `POST /upload` accepts one Markdown (`.md`), PDF (`.pdf`), or Word (`.docx`)

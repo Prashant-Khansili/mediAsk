@@ -1,4 +1,4 @@
-# 💊 MediAsk — AI Assistant for Drug Information
+# MediAsk — AI Assistant for Drug Information
 
 MediAsk is a lightweight, local **RAG (Retrieval-Augmented Generation)** app that lets users ask natural language questions about common medications and receive helpful answers based on trusted medical documents.
 
@@ -103,16 +103,65 @@ MediAsk/
 See [documentation.md](documentation.md) for the architecture, prerequisites,
 API behavior, testing commands, and safety limitations.
 
-### 🚀 Run with Docker (Recommended)
-```bash
+### 🚀 Run the FastAPI backend with Docker
+
+The current Docker image runs the FastAPI backend only. Build it from the
+repository root:
+
+```powershell
 docker build -t mediask .
-docker run -p 8000:8000 mediask
 ```
 
-To mount your FAISS index:
-```bash
-docker run -p 8000:8000 -v $(pwd)/rag/faiss_index:/app/rag/faiss_index mediask
+Start the API container:
+
+```powershell
+docker run --name mediask-api -p 8000:8000 mediask
 ```
+
+Verify that the API is available:
+
+```powershell
+curl.exe http://localhost:8000/
+```
+
+The API is now available at `http://localhost:8000`. In another terminal,
+run the Streamlit interface locally:
+
+```powershell
+streamlit run app\ui.py
+```
+
+If needed, set the UI API URL before starting Streamlit:
+
+```powershell
+$env:MEDIGUIDE_API_URL = "http://localhost:8000"
+streamlit run app\ui.py
+```
+
+For local development, mount the source data and FAISS index so uploads and
+index changes persist after the container stops:
+
+```powershell
+docker run --name mediask-api `
+  -p 8000:8000 `
+  -v "${PWD}\data:/app/data" `
+  -v "${PWD}\rag\faiss_index:/app/rag/faiss_index" `
+  mediask
+```
+
+Useful container commands:
+
+```powershell
+docker logs -f mediask-api
+docker stop mediask-api
+docker start mediask-api
+docker rm mediask-api
+```
+
+If the container already exists, remove it before running a new container with
+the same name. The API upload endpoint writes supported files to `/app/data`
+and rebuilds the index in `/app/rag/faiss_index`; the volume mounts map those
+directories to the local project.
 
 ### 🐍 Run Locally
 ```bash
@@ -125,7 +174,8 @@ uvicorn app.main:app --reload
 
 ### 🧪 Use the Streamlit UI
 
-Make sure your FastAPI backend is running on port `8000`, then launch the UI:
+Make sure your FastAPI backend is running on port `8000`—either locally or in
+the Docker container—then launch the UI:
 
 ```bash
 streamlit run app/ui.py
