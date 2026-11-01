@@ -1,0 +1,45 @@
+name: MediAsk CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    name: Build & Test MediAsk
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "📦 Checkout code"
+        uses: actions/checkout@v3
+
+      - name: "🐍 Set up Python"
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: "📥 Install Python dependencies"
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: "🧪 Run tests"
+        run: python -m unittest discover -s tests -v
+
+      - name: "🧹 Run flake8 lint"
+        run: |
+          pip install flake8
+          flake8 app rag tests
+
+      - name: "🐳 Build Docker image"
+        run:         docker build -t mediask .
+
+      - name: "🚀 Smoke test Docker container"
+        run: |
+          docker run -d -p 8000:8000 --name test-mediask mediask
+          sleep 10
+          curl --fail http://localhost:8000 || (docker logs test-mediask && exit 1)
+          docker stop test-mediask
+          docker rm test-mediask

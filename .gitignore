@@ -1,0 +1,36 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# FAISS index files
+#faiss_index/
+#*.faiss
+
+# Data files
+data/*.pdf
+data/*.txt
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+
+notebooks
