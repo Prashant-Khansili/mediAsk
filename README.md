@@ -1,3 +1,7 @@
+
+
+Uploading MediAsk Demo.mp4…
+
 # MediAsk — AI Assistant for Drug Information
 
 MediAsk is a lightweight, local **RAG (Retrieval-Augmented Generation)** app that lets users ask natural language questions about common medications and receive helpful answers based on trusted medical documents.
