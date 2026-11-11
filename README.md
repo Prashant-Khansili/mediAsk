@@ -1,6 +1,13 @@
 
 
-Uploading MediAsk Demo.mp4…
+
+
+
+https://github.com/user-attachments/assets/c568f253-67b6-482c-bc1d-8e2e17d25df7
+
+
+
+
 
 # MediAsk — AI Assistant for Drug Information
 
