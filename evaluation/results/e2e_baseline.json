@@ -1,0 +1,3477 @@
+{
+  "config": {
+    "dataset": "C:\\Users\\Lenovo\\Desktop\\mediguide\\evaluation\\eval_set.jsonl",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "judge_provider": null,
+    "judge_model": null,
+    "naive": true,
+    "chunking": "fixed",
+    "no_dedupe": true,
+    "mode": "vector",
+    "reranker": null,
+    "embedding": "all-MiniLM-L6-v2",
+    "min_vector_score": 0.3,
+    "min_rerank_score": null,
+    "citation_check": "lexical",
+    "citation_action": "drop",
+    "sleep": null
+  },
+  "complete": true,
+  "summary": {
+    "cases": 50,
+    "answerable": 40,
+    "unanswerable": 10,
+    "hit@1": 0.45,
+    "hit@5": 0.45,
+    "mrr@5": 0.45,
+    "correctness_mean_0_3": 1.5,
+    "correctness_pct_score_ge_2": 0.55,
+    "correctness_pct_score_3": 0.35,
+    "faithfulness_final": 0.9759615384615384,
+    "faithfulness_raw_before_citation_check": 0.9675,
+    "answers_fully_faithful_pct": 0.9230769230769231,
+    "sentences_dropped_by_citation_check": 0,
+    "refusal_recall_unanswerable": 1.0,
+    "false_refusal_rate_answerable": 0.35,
+    "refusal_decision_accuracy": 0.72,
+    "refusal_reasons": {
+      "model_said_unknown": 24
+    },
+    "avg_latency_s": 9.848
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "What is the maximum daily dose of Acetaminophen Injection for adults weighing 50 kg or more?",
+      "answerable": true,
+      "reference_answer": "4,000 mg per day, counting all routes of administration and all acetaminophen-containing products.",
+      "rank": null,
+      "answer_text": "I don't know the answer based on the provided context, as the context only provides dosing information for adults and adolescents weighing *under* 50 kg.",
+      "raw_answer": "I don't know the answer based on the provided context, as the context only provides dosing information for adults and adolescents weighing *under* 50 kg.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.8389163017272949,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "Adults and adolescents weighing under 50 kg: the recommended dosage of Acetaminophen Injection is\n15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 75 mg/kg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nTable 1. Dosing for Adults and Adolescents"
+        },
+        {
+          "id": 2,
+          "text": "Adults and adolescents weighing under 50 kg: the recommended dosage of Acetaminophen Injection is\n15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 75 mg/kg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nTable 1. Dosing for Adults and Adolescents"
+        },
+        {
+          "id": 3,
+          "text": "Adults and adolescents weighing under 50 kg: the recommended dosage of Acetaminophen Injection is\n15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 75 mg/kg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nTable 1. Dosing for Adults and Adolescents"
+        }
+      ],
+      "latency_s": 8.59,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 0.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": false,
+            "reason": "The context does provide information specifically for adults and adolescents weighing under 50 kg, making the claim inaccurate."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer based on the provided context, as the context only provides dosing information for adults and adolescents weighing *under* 50 kg."
+        ]
+      }
+    },
+    {
+      "id": "q02",
+      "question": "What is the largest single dose an adult over 50 kg can receive?",
+      "answerable": true,
+      "reference_answer": "The maximum single dose is 1,000 mg.",
+      "rank": null,
+      "answer_text": "Based on the provided context, there is no mention of the maximum single dose for an adult over 50 kg (the context only states a total daily maximum of 75 mg/kg per day and a minimum dosing interval of 4 hours). Therefore, I don't know the answer.",
+      "raw_answer": "Based on the provided context, there is no mention of the maximum single dose for an adult over 50 kg (the context only states a total daily maximum of 75 mg/kg per day and a minimum dosing interval of 4 hours). Therefore, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5388424396514893,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 10.63,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents only contain dosing guidelines for children, neonates, and infants, and a general 75 mg/kg per day maximum, with no mention of adults over 50 kg."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "The statement of not knowing follows logically from the lack of information in the text."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there is no mention of the maximum single dose for an adult over 50 kg (the context only states a total daily maximum of 75 mg/kg per day and a minimum dosing interval of 4 hours).",
+          "Therefore, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q03",
+      "question": "How should an adolescent weighing 45 kg be dosed?",
+      "answerable": true,
+      "reference_answer": "15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours, maximum single dose 15 mg/kg (up to 750 mg), minimum interval 4 hours, maximum 75 mg/kg per day (up to 3,750 mg).",
+      "rank": null,
+      "answer_text": "Based on the provided context, an adolescent is given a single intravenous dose of **15 mg/kg**. \n\nFor an adolescent weighing 45 kg, the dose would be calculated as follows:\n45 kg × 15 mg/kg = **675 mg**.",
+      "raw_answer": "Based on the provided context, an adolescent is given a single intravenous dose of **15 mg/kg**. \n\nFor an adolescent weighing 45 kg, the dose would be calculated as follows:\n45 kg × 15 mg/kg = **675 mg**.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.4529944658279419,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "single intravenous dose of 15 mg/kg in children and adolescents and 1,000 mg in adults are summarized in \nTable 5.\nTable 5. Acetaminophen Injection Pharmacokinetic Parameters\nSubpopulations\nMean (SD)\nAUC0-6h\n(µg × h/mL)\nCmax\n(µg/mL)\nT½\n(h)\nCL\n(L/h/kg)\nVss\n(L/kg)\nChildren 38 (8) 29 (7) 3.0 (1.5) 0.34 (0.10) 1.2 (0.3)\nAdolescents 41 (7) 31 (9) 2.9 (0.7) 0.29 (0.08) 1.1 (0.3)\nAdults 43 (11) 28 (21) 2.4 (0.6) 0.27 (0.08) 0.8 (0.2)"
+        },
+        {
+          "id": 2,
+          "text": "single intravenous dose of 15 mg/kg in children and adolescents and 1,000 mg in adults are summarized in \nTable 5.\nTable 5. Acetaminophen Injection Pharmacokinetic Parameters\nSubpopulations\nMean (SD)\nAUC0-6h\n(µg × h/mL)\nCmax\n(µg/mL)\nT½\n(h)\nCL\n(L/h/kg)\nVss\n(L/kg)\nChildren 38 (8) 29 (7) 3.0 (1.5) 0.34 (0.10) 1.2 (0.3)\nAdolescents 41 (7) 31 (9) 2.9 (0.7) 0.29 (0.08) 1.1 (0.3)\nAdults 43 (11) 28 (21) 2.4 (0.6) 0.27 (0.08) 0.8 (0.2)"
+        },
+        {
+          "id": 3,
+          "text": "single intravenous dose of 15 mg/kg in children and adolescents and 1,000 mg in adults are summarized in \nTable 5.\nTable 5. Acetaminophen Injection Pharmacokinetic Parameters\nSubpopulations\nMean (SD)\nAUC0-6h\n(µg × h/mL)\nCmax\n(µg/mL)\nT½\n(h)\nCL\n(L/h/kg)\nVss\n(L/kg)\nChildren 38 (8) 29 (7) 3.0 (1.5) 0.34 (0.10) 1.2 (0.3)\nAdolescents 41 (7) 31 (9) 2.9 (0.7) 0.29 (0.08) 1.1 (0.3)\nAdults 43 (11) 28 (21) 2.4 (0.6) 0.27 (0.08) 0.8 (0.2)"
+        }
+      ],
+      "latency_s": 8.82,
+      "correctness": {
+        "score": 2,
+        "reason": "The system correctly calculates the single dose based on the provided text, but misses the additional dosing frequency and maximum daily limit details found in the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The text states a single intravenous dose of 15 mg/kg in children and adolescents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Logical setup for the calculation based on the previous sentence."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Correct mathematical calculation (45 kg * 15 mg/kg = 675 mg)."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, an adolescent is given a single intravenous dose of **15 mg/kg**.",
+          "For an adolescent weighing 45 kg, the dose would be calculated as follows:",
+          "45 kg × 15 mg/kg = **675 mg**."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The text states a single intravenous dose of 15 mg/kg in children and adolescents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Logical setup for the calculation based on the previous sentence."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Correct mathematical calculation (45 kg * 15 mg/kg = 675 mg)."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, an adolescent is given a single intravenous dose of **15 mg/kg**.",
+          "For an adolescent weighing 45 kg, the dose would be calculated as follows:",
+          "45 kg × 15 mg/kg = **675 mg**."
+        ]
+      }
+    },
+    {
+      "id": "q04",
+      "question": "In milligrams, what is the absolute cap on the daily dose for adolescents under 50 kg?",
+      "answerable": true,
+      "reference_answer": "75 mg/kg in 24 hours, up to 3,750 mg.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6955401301383972,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 9.52,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q05",
+      "question": "What is the recommended dosage for a 6-year-old child?",
+      "answerable": true,
+      "reference_answer": "15 mg/kg every 6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of 15 mg/kg and a maximum of 75 mg/kg per day; minimum interval 4 hours.",
+      "rank": null,
+      "answer_text": "Based on the provided context, for children 2 to 12 years of age, the recommended dosage is **15 mg/kg every 6 hours** or **12.5 mg/kg every 4 hours**, up to a maximum of 75 mg/kg per day, with a minimum dosing interval of 4 hours.",
+      "raw_answer": "Based on the provided context, for children 2 to 12 years of age, the recommended dosage is **15 mg/kg every 6 hours** or **12.5 mg/kg every 4 hours**, up to a maximum of 75 mg/kg per day, with a minimum dosing interval of 4 hours.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6790891885757446,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 8.73,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer includes all key facts, numbers, units, and conditions from the reference answer without any contradictions."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All dosing information for children matches the source documents exactly."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, for children 2 to 12 years of age, the recommended dosage is **15 mg/kg every 6 hours** or **12.5 mg/kg every 4 hours**, up to a maximum of 75 mg/kg per day, with a minimum dosing interval of 4 hours."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All dosing information for children matches the source documents exactly."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, for children 2 to 12 years of age, the recommended dosage is **15 mg/kg every 6 hours** or **12.5 mg/kg every 4 hours**, up to a maximum of 75 mg/kg per day, with a minimum dosing interval of 4 hours."
+        ]
+      }
+    },
+    {
+      "id": "q06",
+      "question": "What dose is recommended for treating fever in a 2-week-old neonate?",
+      "answerable": true,
+      "reference_answer": "12.5 mg/kg every 6 hours, to a maximum of 50 mg/kg per day, with a minimum dosing interval of 6 hours.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the recommended dose for a 2-week-old neonate (which falls under the neonates birth to 28 days age group) is **12.5 mg/kg** given every 6 hours.",
+      "raw_answer": "Based on the provided context, the recommended dose for a 2-week-old neonate (which falls under the neonates birth to 28 days age group) is **12.5 mg/kg** given every 6 hours.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7535690665245056,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "Table 3. Dosing for Treatment of Fever in Neonates and Infants\nAge group Dose given every 6 hours Maximum total daily dose of acetaminophen (by all routes)\nNeonates (birth to 28 days) 12.5 mg/kg 50 mg/kg\nInfants (29 days to 2 years) 15 mg/kg 60 mg/kg\n2.5 Instructions for Intravenous Administration\nFor adult and adolescent patients weighing greater than or equal to 50 kg requiring 1,000 mg doses of \nAcetaminophen Injection, administer by intravenous infusion. Acetaminophen Injection may be"
+        },
+        {
+          "id": 2,
+          "text": "Table 3. Dosing for Treatment of Fever in Neonates and Infants\nAge group Dose given every 6 hours Maximum total daily dose of acetaminophen (by all routes)\nNeonates (birth to 28 days) 12.5 mg/kg 50 mg/kg\nInfants (29 days to 2 years) 15 mg/kg 60 mg/kg\n2.5 Instructions for Intravenous Administration\nFor adult and adolescent patients weighing greater than or equal to 50 kg requiring 1,000 mg doses of \nAcetaminophen Injection, administer by intravenous infusion. Acetaminophen Injection may be"
+        },
+        {
+          "id": 3,
+          "text": "Table 3. Dosing for Treatment of Fever in Neonates and Infants\nAge group Dose given every 6 hours Maximum total daily dose of acetaminophen (by all routes)\nNeonates (birth to 28 days) 12.5 mg/kg 50 mg/kg\nInfants (29 days to 2 years) 15 mg/kg 60 mg/kg\n2.5 Instructions for Intravenous Administration\nFor adult and adolescent patients weighing greater than or equal to 50 kg requiring 1,000 mg doses of \nAcetaminophen Injection, administer by intravenous infusion. Acetaminophen Injection may be"
+        }
+      ],
+      "latency_s": 8.66,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer provides the correct dose and frequency but misses the maximum total daily dose detail mentioned in the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The dose and frequency for neonates are explicitly supported by the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the recommended dose for a 2-week-old neonate (which falls under the neonates birth to 28 days age group) is **12.5 mg/kg** given every 6 hours."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The dose and frequency for neonates are explicitly supported by the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the recommended dose for a 2-week-old neonate (which falls under the neonates birth to 28 days age group) is **12.5 mg/kg** given every 6 hours."
+        ]
+      }
+    },
+    {
+      "id": "q07",
+      "question": "What is the maximum total daily dose for infants aged 29 days to 2 years?",
+      "answerable": true,
+      "reference_answer": "60 mg/kg per day.",
+      "rank": null,
+      "answer_text": "Based on the provided context, there is no specific information regarding the maximum total daily dose for infants aged 29 days to 2 years. Therefore, I don't know the answer.",
+      "raw_answer": "Based on the provided context, there is no specific information regarding the maximum total daily dose for infants aged 29 days to 2 years. Therefore, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.741439163684845,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 15.83,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents do not contain dosing information for infants aged 29 days to 2 years."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "No factual claims made."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there is no specific information regarding the maximum total daily dose for infants aged 29 days to 2 years.",
+          "Therefore, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q08",
+      "question": "What is the minimum time between doses for neonates and infants?",
+      "answerable": true,
+      "reference_answer": "6 hours.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the minimum dosing interval (time between doses) for neonates and infants is **6 hours**.",
+      "raw_answer": "Based on the provided context, the minimum dosing interval (time between doses) for neonates and infants is **6 hours**.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6556586623191833,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 0.87,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly states the minimum dosing interval for neonates and infants as 6 hours, which matches the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Document [1] states that the minimum dosing interval for neonates and infants is 6 hours."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the minimum dosing interval (time between doses) for neonates and infants is **6 hours**."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Document [1] states that the minimum dosing interval for neonates and infants is 6 hours."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the minimum dosing interval (time between doses) for neonates and infants is **6 hours**."
+        ]
+      }
+    },
+    {
+      "id": "q09",
+      "question": "According to Table 3, what is the dose given every 6 hours for infants?",
+      "answerable": true,
+      "reference_answer": "15 mg/kg every 6 hours, with a maximum total daily dose of 60 mg/kg.",
+      "rank": null,
+      "answer_text": "Based on the provided context, neonates including premature neonates (born at greater than or equal to 32 weeks gestational age to 28 days chronological age) are given a dose of **12.5 mg/kg every 6 hours**. \n\n*(Note: The provided context mentions \"Neonates and Infants\" and specifies the 12.5 mg/kg every 6 hours dose for neonates; it does not explicitly provide a separate entry for infants outside of this category.)*",
+      "raw_answer": "Based on the provided context, neonates including premature neonates (born at greater than or equal to 32 weeks gestational age to 28 days chronological age) are given a dose of **12.5 mg/kg every 6 hours**. \n\n*(Note: The provided context mentions \"Neonates and Infants\" and specifies the 12.5 mg/kg every 6 hours dose for neonates; it does not explicitly provide a separate entry for infants outside of this category.)*",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6666630506515503,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 9.15,
+      "correctness": {
+        "score": 1,
+        "reason": "The system answer gives 12.5 mg/kg for neonates, but the reference answer for infants (implied from children or general guidelines, though the text groups them and says 12.5 mg/kg for neonates) states 15 mg/kg, making the specific dose for infants incorrect based on standard matching or missing the correct distinction."
+      },
+      "faithfulness": {
+        "score": 0.5,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": false,
+            "reason": "The context specifies 12.5 mg/kg for neonates, but the reference answer states the infant dose is 15 mg/kg."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "This is a correct meta-commentary on the provided context."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, neonates including premature neonates (born at greater than or equal to 32 weeks gestational age to 28 days chronological age) are given a dose of **12.5 mg/kg every 6 hours**.",
+          "*(Note: The provided context mentions \"Neonates and Infants\" and specifies the 12.5 mg/kg every 6 hours dose for neonates; it does not explicitly provide a separate entry for infants outside of this category.)*"
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 0.5,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": false,
+            "reason": "The context specifies 12.5 mg/kg for neonates, but the reference answer states the infant dose is 15 mg/kg."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "This is a correct meta-commentary on the provided context."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, neonates including premature neonates (born at greater than or equal to 32 weeks gestational age to 28 days chronological age) are given a dose of **12.5 mg/kg every 6 hours**.",
+          "*(Note: The provided context mentions \"Neonates and Infants\" and specifies the 12.5 mg/kg every 6 hours dose for neonates; it does not explicitly provide a separate entry for infants outside of this category.)*"
+        ]
+      }
+    },
+    {
+      "id": "q10",
+      "question": "Over how many minutes should the infusion be given?",
+      "answerable": true,
+      "reference_answer": "Over 15 minutes.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the infusion should be given over **15 minutes**.",
+      "raw_answer": "Based on the provided context, the infusion should be given over **15 minutes**.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5973614454269409,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        },
+        {
+          "id": 2,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        },
+        {
+          "id": 3,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        }
+      ],
+      "latency_s": 10.0,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly identifies the infusion time as 15 minutes, matching the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The document states to administer over 15 minutes."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the infusion should be given over **15 minutes**."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The document states to administer over 15 minutes."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the infusion should be given over **15 minutes**."
+        ]
+      }
+    },
+    {
+      "id": "q11",
+      "question": "How should a 650 mg dose be prepared from the 1,000 mg bag?",
+      "answerable": true,
+      "reference_answer": "Using aseptic technique, withdraw the dose from an intact bag and place it in a separate empty sterile container (glass bottle, plastic IV container, or syringe) for infusion, so the whole bag is not given by mistake.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5714670419692993,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 9.5,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q12",
+      "question": "How are small pediatric doses of up to 60 mL administered?",
+      "answerable": true,
+      "reference_answer": "Placed in a syringe and administered over 15 minutes using a syringe pump.",
+      "rank": 1,
+      "answer_text": "Small pediatric doses of up to 60 mL are placed in a syringe and administered over 15 minutes using a syringe pump.",
+      "raw_answer": "Small pediatric doses of up to 60 mL are placed in a syringe and administered over 15 minutes using a syringe pump.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6983439326286316,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        },
+        {
+          "id": 2,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        },
+        {
+          "id": 3,
+          "text": "portion must be discarded.\nPlace small volume pediatric doses up to 60 mL in volume in a syringe and administer over 15 minutes \nusing a syringe pump.\nMonitor the end of the infusion in order to prevent the possibility of an air embolism, especially in cases \nwhere the Acetaminophen Injection infusion is the primary infusion.\nAfter opening the overwrap, immediate use of Acetaminophen Injection is recommended. However the"
+        }
+      ],
+      "latency_s": 4.24,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly and completely states all key facts from the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the provided text."
+          }
+        ],
+        "sentences": [
+          "Small pediatric doses of up to 60 mL are placed in a syringe and administered over 15 minutes using a syringe pump."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the provided text."
+          }
+        ],
+        "sentences": [
+          "Small pediatric doses of up to 60 mL are placed in a syringe and administered over 15 minutes using a syringe pump."
+        ]
+      }
+    },
+    {
+      "id": "q13",
+      "question": "Which drugs are physically incompatible with Acetaminophen Injection?",
+      "answerable": true,
+      "reference_answer": "Diazepam and chlorpromazine hydrochloride.",
+      "rank": 1,
+      "answer_text": "Diazepam and chlorpromazine hydrochloride are physically incompatible with Acetaminophen Injection.",
+      "raw_answer": "Diazepam and chlorpromazine hydrochloride are physically incompatible with Acetaminophen Injection.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6270365118980408,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "stability of the product after it has been removed from the overwrap has been demonstrated for 24 hours.\nDo not add other medications to the Acetaminophen Injection solution. Diazepam and chlorpromazine \nhydrochloride are physically incompatible with Acetaminophen Injection, therefore do not administer \nsimultaneously.\n3 DOSAGE FORMS AND STRENGTHS\nInjection: Acetaminophen Injection is a sterile, clear, colorless, non-pyrogenic, preservative free, isotonic"
+        },
+        {
+          "id": 2,
+          "text": "stability of the product after it has been removed from the overwrap has been demonstrated for 24 hours.\nDo not add other medications to the Acetaminophen Injection solution. Diazepam and chlorpromazine \nhydrochloride are physically incompatible with Acetaminophen Injection, therefore do not administer \nsimultaneously.\n3 DOSAGE FORMS AND STRENGTHS\nInjection: Acetaminophen Injection is a sterile, clear, colorless, non-pyrogenic, preservative free, isotonic"
+        },
+        {
+          "id": 3,
+          "text": "stability of the product after it has been removed from the overwrap has been demonstrated for 24 hours.\nDo not add other medications to the Acetaminophen Injection solution. Diazepam and chlorpromazine \nhydrochloride are physically incompatible with Acetaminophen Injection, therefore do not administer \nsimultaneously.\n3 DOSAGE FORMS AND STRENGTHS\nInjection: Acetaminophen Injection is a sterile, clear, colorless, non-pyrogenic, preservative free, isotonic"
+        }
+      ],
+      "latency_s": 9.26,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly identifies both drugs that are physically incompatible with Acetaminophen Injection, matching the reference answer completely."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly stated in the source documents."
+          }
+        ],
+        "sentences": [
+          "Diazepam and chlorpromazine hydrochloride are physically incompatible with Acetaminophen Injection."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly stated in the source documents."
+          }
+        ],
+        "sentences": [
+          "Diazepam and chlorpromazine hydrochloride are physically incompatible with Acetaminophen Injection."
+        ]
+      }
+    },
+    {
+      "id": "q14",
+      "question": "Why should the end of the infusion be monitored?",
+      "answerable": true,
+      "reference_answer": "To prevent the possibility of an air embolism, especially when it is the primary infusion.",
+      "rank": null,
+      "answer_text": "Based on the provided context, there is no mention of why the end of the infusion should be monitored. Therefore, I don't know the answer.",
+      "raw_answer": "Based on the provided context, there is no mention of why the end of the infusion should be monitored. Therefore, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.4913387894630432,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "administered without further dilution. Examine the bag contents before dose preparation or administering. \nDO NOT USE if particulate matter or discoloration is observed. Check for minute leaks by firmly \nsqueezing the bag. If leaks are detected, discard the solution, as sterility may be impaired. Keep the \ninfusion bags in the overwrap until ready to use. Administer the contents of the bag intravenously over"
+        },
+        {
+          "id": 2,
+          "text": "administered without further dilution. Examine the bag contents before dose preparation or administering. \nDO NOT USE if particulate matter or discoloration is observed. Check for minute leaks by firmly \nsqueezing the bag. If leaks are detected, discard the solution, as sterility may be impaired. Keep the \ninfusion bags in the overwrap until ready to use. Administer the contents of the bag intravenously over"
+        },
+        {
+          "id": 3,
+          "text": "administered without further dilution. Examine the bag contents before dose preparation or administering. \nDO NOT USE if particulate matter or discoloration is observed. Check for minute leaks by firmly \nsqueezing the bag. If leaks are detected, discard the solution, as sterility may be impaired. Keep the \ninfusion bags in the overwrap until ready to use. Administer the contents of the bag intravenously over"
+        }
+      ],
+      "latency_s": 8.31,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents do not mention monitoring the end of the infusion."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Follows logically from the first sentence."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there is no mention of why the end of the infusion should be monitored.",
+          "Therefore, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q15",
+      "question": "What is the concentration of acetaminophen in the injection?",
+      "answerable": true,
+      "reference_answer": "10 mg/mL (1,000 mg in 100 mL).",
+      "rank": null,
+      "answer_text": "Based on the provided context, the exact concentration of acetaminophen in the injection is not mentioned; however, the context does state that the pharmacokinetic profile has been studied following administration of single doses of **500, 650, and 1,000 mg**. \n\nIf the question refers to something else not covered in this text, I don't know the answer.",
+      "raw_answer": "Based on the provided context, the exact concentration of acetaminophen in the injection is not mentioned; however, the context does state that the pharmacokinetic profile has been studied following administration of single doses of **500, 650, and 1,000 mg**. \n\nIf the question refers to something else not covered in this text, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7780469655990601,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 2,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 3,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        }
+      ],
+      "latency_s": 8.87,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents state that the pharmacokinetic profile has been studied following single doses of 500, 650, and 1,000 mg."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Contains no factual claims, as it is a statement of limitation/acknowledgment."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the exact concentration of acetaminophen in the injection is not mentioned; however, the context does state that the pharmacokinetic profile has been studied following administration of single doses of **500, 650, and 1,000 mg**.",
+          "If the question refers to something else not covered in this text, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q16",
+      "question": "Who should not receive Acetaminophen Injection?",
+      "answerable": true,
+      "reference_answer": "Patients with known hypersensitivity to acetaminophen or its excipients, and patients with severe hepatic impairment or severe active liver disease.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the text does not explicitly state who *should not* receive Acetaminophen Injection. Instead, it states that caution should be used when administering it to patients with the following conditions:\n* Hepatic impairment or active hepatic disease\n* Alcoholism\n* Chronic malnutrition\n* Severe hypovolemia\n* Severe renal impairment (creatinine clearance less than or equal to 30 mL/min)\n\nAdditionally, it states that Acetaminophen Injection should be discontinued immediately at the first appearance of a skin rash and if symptoms associated with allergy or hypersensitivity occur.",
+      "raw_answer": "Based on the provided context, the text does not explicitly state who *should not* receive Acetaminophen Injection. Instead, it states that caution should be used when administering it to patients with the following conditions:\n* Hepatic impairment or active hepatic disease\n* Alcoholism\n* Chronic malnutrition\n* Severe hypovolemia\n* Severe renal impairment (creatinine clearance less than or equal to 30 mL/min)\n\nAdditionally, it states that Acetaminophen Injection should be discontinued immediately at the first appearance of a skin rash and if symptoms associated with allergy or hypersensitivity occur.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7054979801177979,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        },
+        {
+          "id": 2,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        },
+        {
+          "id": 3,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        }
+      ],
+      "latency_s": 10.66,
+      "correctness": {
+        "score": 0,
+        "reason": "The system answer states that the text does not mention who should not receive the injection and only lists precautions, whereas the reference gives specific contraindications."
+      },
+      "faithfulness": {
+        "score": 0.875,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": false,
+            "reason": "The documents do not state whether there are absolute contraindications or not, but the system claims the text does not state who should not receive it."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 6,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 7,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 8,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the text does not explicitly state who *should not* receive Acetaminophen Injection.",
+          "Instead, it states that caution should be used when administering it to patients with the following conditions:",
+          "* Hepatic impairment or active hepatic disease",
+          "* Alcoholism",
+          "* Chronic malnutrition",
+          "* Severe hypovolemia",
+          "* Severe renal impairment (creatinine clearance less than or equal to 30 mL/min)",
+          "Additionally, it states that Acetaminophen Injection should be discontinued immediately at the first appearance of a skin rash and if symptoms associated with allergy or hypersensitivity occur."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 0.875,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": false,
+            "reason": "The documents do not state whether there are absolute contraindications or not, but the system claims the text does not state who should not receive it."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 6,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 7,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 8,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the text does not explicitly state who *should not* receive Acetaminophen Injection.",
+          "Instead, it states that caution should be used when administering it to patients with the following conditions:",
+          "* Hepatic impairment or active hepatic disease",
+          "* Alcoholism",
+          "* Chronic malnutrition",
+          "* Severe hypovolemia",
+          "* Severe renal impairment (creatinine clearance less than or equal to 30 mL/min)",
+          "Additionally, it states that Acetaminophen Injection should be discontinued immediately at the first appearance of a skin rash and if symptoms associated with allergy or hypersensitivity occur."
+        ]
+      }
+    },
+    {
+      "id": "q17",
+      "question": "In which conditions should acetaminophen be used with caution because of liver risk?",
+      "answerable": true,
+      "reference_answer": "Hepatic impairment or active hepatic disease, alcoholism, chronic malnutrition, severe hypovolemia, or severe renal impairment (CrCl of 30 mL/min or less).",
+      "rank": null,
+      "answer_text": "Based on the provided context, the section related to this risk is **8.6 Patients with Hepatic Impairment** (under Use in Specific Populations) and **5.1 Hepatic Injury** (under Warnings and Precautions).",
+      "raw_answer": "Based on the provided context, the section related to this risk is **8.6 Patients with Hepatic Impairment** (under Use in Specific Populations) and **5.1 Hepatic Injury** (under Warnings and Precautions).",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7513065934181213,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        },
+        {
+          "id": 2,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        },
+        {
+          "id": 3,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        }
+      ],
+      "latency_s": 12.08,
+      "correctness": {
+        "score": 0,
+        "reason": "The system answer fails to state the specific conditions mentioned in the reference answer, such as alcoholism, chronic malnutrition, severe hypovolemia, or severe renal impairment."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The sections mentioned are present in the provided document table of contents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the section related to this risk is **8.6 Patients with Hepatic Impairment** (under Use in Specific Populations) and **5.1 Hepatic Injury** (under Warnings and Precautions)."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The sections mentioned are present in the provided document table of contents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the section related to this risk is **8.6 Patients with Hepatic Impairment** (under Use in Specific Populations) and **5.1 Hepatic Injury** (under Warnings and Precautions)."
+        ]
+      }
+    },
+    {
+      "id": "q18",
+      "question": "What serious skin reactions can acetaminophen cause?",
+      "answerable": true,
+      "reference_answer": "Acute generalized exanthematous pustulosis (AGEP), Stevens-Johnson syndrome (SJS), and toxic epidermal necrolysis (TEN), which can be fatal.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, acetaminophen can rarely cause the following serious skin reactions:\n\n* Acute generalized exanthematous pustulosis (AGEP)\n* Stevens-Johnson Syndrome (SJS)\n* Toxic epidermal necrolysis (TEN)",
+      "raw_answer": "Based on the provided context, acetaminophen can rarely cause the following serious skin reactions:\n\n* Acute generalized exanthematous pustulosis (AGEP)\n* Stevens-Johnson Syndrome (SJS)\n* Toxic epidermal necrolysis (TEN)",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7698294520378113,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "impairment or active hepatic disease, alcoholism, chronic malnutrition, severe hypovolemia (e.g., due to \ndehydration or blood loss), or severe renal impairment (creatinine clearance less than or equal to\n30 mL/min) [see Use in Specific Populations (8.6, 8.7)].\n5.2 Serious Skin Reactions\nRarely, acetaminophen may cause serious skin reactions such as acute generalized exanthematous \npustulosis (AGEP), Stevens-Johnson Syndrome (SJS), and toxic epidermal necrolysis (TEN), which can"
+        },
+        {
+          "id": 2,
+          "text": "impairment or active hepatic disease, alcoholism, chronic malnutrition, severe hypovolemia (e.g., due to \ndehydration or blood loss), or severe renal impairment (creatinine clearance less than or equal to\n30 mL/min) [see Use in Specific Populations (8.6, 8.7)].\n5.2 Serious Skin Reactions\nRarely, acetaminophen may cause serious skin reactions such as acute generalized exanthematous \npustulosis (AGEP), Stevens-Johnson Syndrome (SJS), and toxic epidermal necrolysis (TEN), which can"
+        },
+        {
+          "id": 3,
+          "text": "impairment or active hepatic disease, alcoholism, chronic malnutrition, severe hypovolemia (e.g., due to \ndehydration or blood loss), or severe renal impairment (creatinine clearance less than or equal to\n30 mL/min) [see Use in Specific Populations (8.6, 8.7)].\n5.2 Serious Skin Reactions\nRarely, acetaminophen may cause serious skin reactions such as acute generalized exanthematous \npustulosis (AGEP), Stevens-Johnson Syndrome (SJS), and toxic epidermal necrolysis (TEN), which can"
+        }
+      ],
+      "latency_s": 8.93,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer misses the detail from the reference that these skin reactions can be fatal."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, acetaminophen can rarely cause the following serious skin reactions:",
+          "* Acute generalized exanthematous pustulosis (AGEP)",
+          "* Stevens-Johnson Syndrome (SJS)",
+          "* Toxic epidermal necrolysis (TEN)"
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, acetaminophen can rarely cause the following serious skin reactions:",
+          "* Acute generalized exanthematous pustulosis (AGEP)",
+          "* Stevens-Johnson Syndrome (SJS)",
+          "* Toxic epidermal necrolysis (TEN)"
+        ]
+      }
+    },
+    {
+      "id": "q19",
+      "question": "What dosing errors does the label warn prescribers to avoid?",
+      "answerable": true,
+      "reference_answer": "Confusing mg and mL, not dosing by weight for patients under 50 kg, incorrectly programmed infusion pumps, and exceeding maximum daily limits from all sources.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, prescribers are warned to take care to avoid dosing errors where:\n* The dose in milligrams (mg) and milliliters (mL) is confused.\n* The dosing is not based on weight for patients under 50 kg. \n* Infusion pumps are improperly programmed. \n\nThese errors could result in accidental overdose and death.",
+      "raw_answer": "Based on the provided context, prescribers are warned to take care to avoid dosing errors where:\n* The dose in milligrams (mg) and milliliters (mL) is confused.\n* The dosing is not based on weight for patients under 50 kg. \n* Infusion pumps are improperly programmed. \n\nThese errors could result in accidental overdose and death.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5282672643661499,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "FULL PRESCRIBING INFORMATION\nWARNING: RISK OF MEDICATION ERRORS AND HEPATOTOXICITY\nTake care when prescribing, preparing, and administering Acetaminophen Injection to \navoid dosing errors which could result in accidental overdose and death [see Warnings \nand Precautions (5.3)]. In particular, be careful to ensure that:\n the dose in milligrams (mg) and milliliters (mL) is not confused;\n the dosing is based on weight for patients under 50 kg;\n infusion pumps are properly programmed; and"
+        },
+        {
+          "id": 2,
+          "text": "FULL PRESCRIBING INFORMATION\nWARNING: RISK OF MEDICATION ERRORS AND HEPATOTOXICITY\nTake care when prescribing, preparing, and administering Acetaminophen Injection to \navoid dosing errors which could result in accidental overdose and death [see Warnings \nand Precautions (5.3)]. In particular, be careful to ensure that:\n the dose in milligrams (mg) and milliliters (mL) is not confused;\n the dosing is based on weight for patients under 50 kg;\n infusion pumps are properly programmed; and"
+        },
+        {
+          "id": 3,
+          "text": "FULL PRESCRIBING INFORMATION\nWARNING: RISK OF MEDICATION ERRORS AND HEPATOTOXICITY\nTake care when prescribing, preparing, and administering Acetaminophen Injection to \navoid dosing errors which could result in accidental overdose and death [see Warnings \nand Precautions (5.3)]. In particular, be careful to ensure that:\n the dose in milligrams (mg) and milliliters (mL) is not confused;\n the dosing is based on weight for patients under 50 kg;\n infusion pumps are properly programmed; and"
+        }
+      ],
+      "latency_s": 9.42,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer includes most of the reference details (confusing mg and mL, weight-based dosing for patients under 50 kg, and pump programming), but misses the detail about exceeding maximum daily limits."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Introductory statement."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, prescribers are warned to take care to avoid dosing errors where:",
+          "* The dose in milligrams (mg) and milliliters (mL) is confused.",
+          "* The dosing is not based on weight for patients under 50 kg.",
+          "* Infusion pumps are improperly programmed.",
+          "These errors could result in accidental overdose and death."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Introductory statement."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Supported by Document 1."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, prescribers are warned to take care to avoid dosing errors where:",
+          "* The dose in milligrams (mg) and milliliters (mL) is confused.",
+          "* The dosing is not based on weight for patients under 50 kg.",
+          "* Infusion pumps are improperly programmed.",
+          "These errors could result in accidental overdose and death."
+        ]
+      }
+    },
+    {
+      "id": "q20",
+      "question": "What signs of anaphylaxis have been reported with acetaminophen?",
+      "answerable": true,
+      "reference_answer": "Swelling of the face, mouth, and throat, respiratory distress, urticaria, rash, and pruritus.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, life-threatening anaphylaxis has been infrequently reported, and the clinical signs associated with allergic or hypersensitivity reactions to acetaminophen include:\n\n* Swelling of the face, mouth, and throat\n* Respiratory distress\n* Urticaria\n* Rash\n* Pruritus",
+      "raw_answer": "Based on the provided context, life-threatening anaphylaxis has been infrequently reported, and the clinical signs associated with allergic or hypersensitivity reactions to acetaminophen include:\n\n* Swelling of the face, mouth, and throat\n* Respiratory distress\n* Urticaria\n* Rash\n* Pruritus",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7434691190719604,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "acetaminophen. Clinical signs included swelling of the face, mouth, and throat, respiratory distress, \nurticaria, rash, and pruritus. There were infrequent reports of life-threatening anaphylaxis requiring \nemergent medical attention. Discontinue Acetaminophen Injection immediately if symptoms associated \nwith allergy or hypersensitivity occur. Do not use Acetaminophen Injection in patients with \nacetaminophen allergy.\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        },
+        {
+          "id": 2,
+          "text": "acetaminophen. Clinical signs included swelling of the face, mouth, and throat, respiratory distress, \nurticaria, rash, and pruritus. There were infrequent reports of life-threatening anaphylaxis requiring \nemergent medical attention. Discontinue Acetaminophen Injection immediately if symptoms associated \nwith allergy or hypersensitivity occur. Do not use Acetaminophen Injection in patients with \nacetaminophen allergy.\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        },
+        {
+          "id": 3,
+          "text": "acetaminophen. Clinical signs included swelling of the face, mouth, and throat, respiratory distress, \nurticaria, rash, and pruritus. There were infrequent reports of life-threatening anaphylaxis requiring \nemergent medical attention. Discontinue Acetaminophen Injection immediately if symptoms associated \nwith allergy or hypersensitivity occur. Do not use Acetaminophen Injection in patients with \nacetaminophen allergy.\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        }
+      ],
+      "latency_s": 18.73,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer states every key fact of the reference answer accurately and completely."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 6,
+            "supported": true,
+            "reason": "Supported by documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, life-threatening anaphylaxis has been infrequently reported, and the clinical signs associated with allergic or hypersensitivity reactions to acetaminophen include:",
+          "* Swelling of the face, mouth, and throat",
+          "* Respiratory distress",
+          "* Urticaria",
+          "* Rash",
+          "* Pruritus"
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 5,
+            "supported": true,
+            "reason": "Supported by documents."
+          },
+          {
+            "n": 6,
+            "supported": true,
+            "reason": "Supported by documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, life-threatening anaphylaxis has been infrequently reported, and the clinical signs associated with allergic or hypersensitivity reactions to acetaminophen include:",
+          "* Swelling of the face, mouth, and throat",
+          "* Respiratory distress",
+          "* Urticaria",
+          "* Rash",
+          "* Pruritus"
+        ]
+      }
+    },
+    {
+      "id": "q21",
+      "question": "How many adult patients received Acetaminophen Injection in clinical trials?",
+      "answerable": true,
+      "reference_answer": "1,020 adult patients.",
+      "rank": 1,
+      "answer_text": "A total of 1,020 adult patients have received Acetaminophen Injection in clinical trials.",
+      "raw_answer": "A total of 1,020 adult patients have received Acetaminophen Injection in clinical trials.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.8607974052429199,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "cannot be directly compared to rates in other clinical trials and may not reflect the rates observed in \npractice.\nAdult Population\nA total of 1,020 adult patients have received Acetaminophen Injection in clinical trials, including 37.3% \n(n=380) who received 5 or more doses, and 17.0% (n=173) who received more than 10 doses. Most \npatients were treated with Acetaminophen Injection 1,000 mg every 6 hours. A total of 13.1% (n=134) \nreceived Acetaminophen Injection 650 mg every 4 hours."
+        },
+        {
+          "id": 2,
+          "text": "cannot be directly compared to rates in other clinical trials and may not reflect the rates observed in \npractice.\nAdult Population\nA total of 1,020 adult patients have received Acetaminophen Injection in clinical trials, including 37.3% \n(n=380) who received 5 or more doses, and 17.0% (n=173) who received more than 10 doses. Most \npatients were treated with Acetaminophen Injection 1,000 mg every 6 hours. A total of 13.1% (n=134) \nreceived Acetaminophen Injection 650 mg every 4 hours."
+        },
+        {
+          "id": 3,
+          "text": "cannot be directly compared to rates in other clinical trials and may not reflect the rates observed in \npractice.\nAdult Population\nA total of 1,020 adult patients have received Acetaminophen Injection in clinical trials, including 37.3% \n(n=380) who received 5 or more doses, and 17.0% (n=173) who received more than 10 doses. Most \npatients were treated with Acetaminophen Injection 1,000 mg every 6 hours. A total of 13.1% (n=134) \nreceived Acetaminophen Injection 650 mg every 4 hours."
+        }
+      ],
+      "latency_s": 10.47,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly states the exact number of adult patients who received Acetaminophen Injection in clinical trials, matching the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The statement directly matches the text in the provided documents."
+          }
+        ],
+        "sentences": [
+          "A total of 1,020 adult patients have received Acetaminophen Injection in clinical trials."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The statement directly matches the text in the provided documents."
+          }
+        ],
+        "sentences": [
+          "A total of 1,020 adult patients have received Acetaminophen Injection in clinical trials."
+        ]
+      }
+    },
+    {
+      "id": "q22",
+      "question": "What percentage of adults on the injection had nausea compared with placebo?",
+      "answerable": true,
+      "reference_answer": "34% (138 of 402) with Acetaminophen Injection versus 31% (119 of 379) with placebo.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the exact percentage of adults on the injection who had nausea compared with placebo is not mentioned. The text only states that nausea was one of the most common adverse events with an incidence greater than or equal to 5% and greater than placebo. Therefore, I don't know the answer.",
+      "raw_answer": "Based on the provided context, the exact percentage of adults on the injection who had nausea compared with placebo is not mentioned. The text only states that nausea was one of the most common adverse events with an incidence greater than or equal to 5% and greater than placebo. Therefore, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6903896331787109,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "All adverse reactions that occurred in adult patients treated with either Acetaminophen Injection or \nplacebo in repeated dose, placebo-controlled clinical trials at an incidence greater than or equal to 3% and \nat a greater frequency than placebo are listed in Table 4. The most common adverse events in adult \npatients treated with Acetaminophen Injection (incidence greater than or equal to 5% and greater than \nplacebo) were nausea, vomiting, headache, and insomnia."
+        },
+        {
+          "id": 2,
+          "text": "All adverse reactions that occurred in adult patients treated with either Acetaminophen Injection or \nplacebo in repeated dose, placebo-controlled clinical trials at an incidence greater than or equal to 3% and \nat a greater frequency than placebo are listed in Table 4. The most common adverse events in adult \npatients treated with Acetaminophen Injection (incidence greater than or equal to 5% and greater than \nplacebo) were nausea, vomiting, headache, and insomnia."
+        },
+        {
+          "id": 3,
+          "text": "All adverse reactions that occurred in adult patients treated with either Acetaminophen Injection or \nplacebo in repeated dose, placebo-controlled clinical trials at an incidence greater than or equal to 3% and \nat a greater frequency than placebo are listed in Table 4. The most common adverse events in adult \npatients treated with Acetaminophen Injection (incidence greater than or equal to 5% and greater than \nplacebo) were nausea, vomiting, headache, and insomnia."
+        }
+      ],
+      "latency_s": 9.05,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The context does not state the exact percentage of adults on the injection who had nausea."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "The text states nausea had an incidence >= 5% and greater than placebo."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Appropriate conclusion given the lack of specific percentages."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the exact percentage of adults on the injection who had nausea compared with placebo is not mentioned.",
+          "The text only states that nausea was one of the most common adverse events with an incidence greater than or equal to 5% and greater than placebo.",
+          "Therefore, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q23",
+      "question": "Why is pyrexia data included in the adverse reaction table?",
+      "answerable": true,
+      "reference_answer": "To alert healthcare practitioners that the antipyretic effects of Acetaminophen Injection may mask fever.",
+      "rank": 1,
+      "answer_text": "Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the antipyretic effects of Acetaminophen Injection may mask fever.",
+      "raw_answer": "Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the antipyretic effects of Acetaminophen Injection may mask fever.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5483753085136414,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "Pyrexia* 22 (5) 52 (14)\nNervous System Disorders\nHeadache 39 (10) 33 (9)\nPsychiatric Disorders\nInsomnia 30 (7) 21 (5)\n* Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the \nantipyretic effects of Acetaminophen Injection may mask fever.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "Pyrexia* 22 (5) 52 (14)\nNervous System Disorders\nHeadache 39 (10) 33 (9)\nPsychiatric Disorders\nInsomnia 30 (7) 21 (5)\n* Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the \nantipyretic effects of Acetaminophen Injection may mask fever.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "Pyrexia* 22 (5) 52 (14)\nNervous System Disorders\nHeadache 39 (10) 33 (9)\nPsychiatric Disorders\nInsomnia 30 (7) 21 (5)\n* Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the \nantipyretic effects of Acetaminophen Injection may mask fever.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 9.13,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly and completely states the reason why pyrexia data is included as given in the reference."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the source text."
+          }
+        ],
+        "sentences": [
+          "Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the antipyretic effects of Acetaminophen Injection may mask fever."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the source text."
+          }
+        ],
+        "sentences": [
+          "Pyrexia adverse reaction frequency data is included in order to alert healthcare practitioners that the antipyretic effects of Acetaminophen Injection may mask fever."
+        ]
+      }
+    },
+    {
+      "id": "q24",
+      "question": "What are the most common side effects in children treated with the injection?",
+      "answerable": true,
+      "reference_answer": "Nausea, vomiting, constipation, and pruritus.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, the most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with Acetaminophen Injection are nausea, vomiting, constipation, and pruritus.",
+      "raw_answer": "Based on the provided context, the most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with Acetaminophen Injection are nausea, vomiting, constipation, and pruritus.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6022474765777588,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "infants, children, and adolescents, respectively.\nThe most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with \nAcetaminophen Injection were nausea, vomiting, constipation, and pruritus.\nOther Adverse Reactions Observed During Clinical Studies of Acetaminophen Injection in Pediatrics\nThe following additional treatment-emergent adverse reactions were reported by pediatric subjects treated"
+        },
+        {
+          "id": 2,
+          "text": "infants, children, and adolescents, respectively.\nThe most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with \nAcetaminophen Injection were nausea, vomiting, constipation, and pruritus.\nOther Adverse Reactions Observed During Clinical Studies of Acetaminophen Injection in Pediatrics\nThe following additional treatment-emergent adverse reactions were reported by pediatric subjects treated"
+        },
+        {
+          "id": 3,
+          "text": "infants, children, and adolescents, respectively.\nThe most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with \nAcetaminophen Injection were nausea, vomiting, constipation, and pruritus.\nOther Adverse Reactions Observed During Clinical Studies of Acetaminophen Injection in Pediatrics\nThe following additional treatment-emergent adverse reactions were reported by pediatric subjects treated"
+        }
+      ],
+      "latency_s": 19.1,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly and completely states all the key facts from the reference answer (nausea, vomiting, constipation, and pruritus) without any contradictions or missing details."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Every claim in this sentence is directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with Acetaminophen Injection are nausea, vomiting, constipation, and pruritus."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Every claim in this sentence is directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the most common adverse events (incidence greater than or equal to 5%) in pediatric patients treated with Acetaminophen Injection are nausea, vomiting, constipation, and pruritus."
+        ]
+      }
+    },
+    {
+      "id": "q25",
+      "question": "How many pediatric patients were treated with Acetaminophen Injection in studies, and how were they distributed by age?",
+      "answerable": true,
+      "reference_answer": "483 pediatric patients: 72 neonates, 167 infants, 171 children, and 73 adolescents.",
+      "rank": null,
+      "answer_text": "Based on the provided context, there were 244 pediatric patients 2 years and older in clinical studies, and safety and pharmacokinetic data from 239 patients younger than 2 years, which included neonates with a gestational age greater than or equal to 32 weeks.",
+      "raw_answer": "Based on the provided context, there were 244 pediatric patients 2 years and older in clinical studies, and safety and pharmacokinetic data from 239 patients younger than 2 years, which included neonates with a gestational age greater than or equal to 32 weeks.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.8237706422805786,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        },
+        {
+          "id": 2,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        },
+        {
+          "id": 3,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        }
+      ],
+      "latency_s": 6.09,
+      "correctness": {
+        "score": 1,
+        "reason": "The system answer provides the total number of patients from the studies (244 + 239 = 483), but fails to state the complete age distribution breakdown (neonates, infants, children, adolescents) as requested by the question and provided in the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All facts in this sentence are directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there were 244 pediatric patients 2 years and older in clinical studies, and safety and pharmacokinetic data from 239 patients younger than 2 years, which included neonates with a gestational age greater than or equal to 32 weeks."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All facts in this sentence are directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there were 244 pediatric patients 2 years and older in clinical studies, and safety and pharmacokinetic data from 239 patients younger than 2 years, which included neonates with a gestational age greater than or equal to 32 weeks."
+        ]
+      }
+    },
+    {
+      "id": "q26",
+      "question": "Which liver enzyme can increase the hepatotoxic potential of acetaminophen when induced?",
+      "answerable": true,
+      "reference_answer": "Cytochrome P450 enzyme CYP2E1.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, the liver enzyme is hepatic cytochrome enzyme **CYP2E1**.",
+      "raw_answer": "Based on the provided context, the liver enzyme is hepatic cytochrome enzyme **CYP2E1**.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6958501935005188,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\nSubstances that induce or regulate hepatic cytochrome enzyme CYP2E1 may alter the metabolism of \nacetaminophen and increase its hepatotoxic potential. The clinical consequences of these effects have not \nbeen established. Effects of ethanol are complex, because excessive alcohol usage can induce hepatic \ncytochromes, but ethanol also acts as a competitive inhibitor of the metabolism of acetaminophen.\n7.2 Anticoagulants"
+        },
+        {
+          "id": 2,
+          "text": "7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\nSubstances that induce or regulate hepatic cytochrome enzyme CYP2E1 may alter the metabolism of \nacetaminophen and increase its hepatotoxic potential. The clinical consequences of these effects have not \nbeen established. Effects of ethanol are complex, because excessive alcohol usage can induce hepatic \ncytochromes, but ethanol also acts as a competitive inhibitor of the metabolism of acetaminophen.\n7.2 Anticoagulants"
+        },
+        {
+          "id": 3,
+          "text": "7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\nSubstances that induce or regulate hepatic cytochrome enzyme CYP2E1 may alter the metabolism of \nacetaminophen and increase its hepatotoxic potential. The clinical consequences of these effects have not \nbeen established. Effects of ethanol are complex, because excessive alcohol usage can induce hepatic \ncytochromes, but ethanol also acts as a competitive inhibitor of the metabolism of acetaminophen.\n7.2 Anticoagulants"
+        }
+      ],
+      "latency_s": 29.43,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly identifies the enzyme CYP2E1 as stated in the reference."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by Document [1], [2], and [3]."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the liver enzyme is hepatic cytochrome enzyme **CYP2E1**."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by Document [1], [2], and [3]."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the liver enzyme is hepatic cytochrome enzyme **CYP2E1**."
+        ]
+      }
+    },
+    {
+      "id": "q27",
+      "question": "Does acetaminophen affect patients taking warfarin?",
+      "answerable": true,
+      "reference_answer": "Chronic oral acetaminophen at 4,000 mg/day has increased INR in some patients stabilized on warfarin; more frequent INR assessment may be appropriate.",
+      "rank": 1,
+      "answer_text": "Yes. Chronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in the international normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an anticoagulant.",
+      "raw_answer": "Yes. Chronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in the international normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an anticoagulant.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6371813416481018,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "7.2 Anticoagulants\nChronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in \ninternational normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an \nanticoagulant. As no studies have been performed evaluating the short-term use of Acetaminophen \nInjection in patients on oral anticoagulants, more frequent assessment of INR may be appropriate in such \ncircumstances.\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\nRisk Summary"
+        },
+        {
+          "id": 2,
+          "text": "7.2 Anticoagulants\nChronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in \ninternational normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an \nanticoagulant. As no studies have been performed evaluating the short-term use of Acetaminophen \nInjection in patients on oral anticoagulants, more frequent assessment of INR may be appropriate in such \ncircumstances.\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\nRisk Summary"
+        },
+        {
+          "id": 3,
+          "text": "7.2 Anticoagulants\nChronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in \ninternational normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an \nanticoagulant. As no studies have been performed evaluating the short-term use of Acetaminophen \nInjection in patients on oral anticoagulants, more frequent assessment of INR may be appropriate in such \ncircumstances.\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\nRisk Summary"
+        }
+      ],
+      "latency_s": 9.42,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly states all key facts from the reference answer, including the dose, population, and effect on INR."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Direct affirmation based on the provided documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly supported by document text."
+          }
+        ],
+        "sentences": [
+          "Yes.",
+          "Chronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in the international normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an anticoagulant."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Direct affirmation based on the provided documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly supported by document text."
+          }
+        ],
+        "sentences": [
+          "Yes.",
+          "Chronic oral acetaminophen use at a dose of 4,000 mg/day has been shown to cause an increase in the international normalized ratio (INR) in some patients who have been stabilized on sodium warfarin as an anticoagulant."
+        ]
+      }
+    },
+    {
+      "id": "q28",
+      "question": "Is oral acetaminophen use in pregnancy linked to birth defects?",
+      "answerable": true,
+      "reference_answer": "Published epidemiological studies have not reported a clear association with birth defects, miscarriage, or adverse maternal or fetal outcomes.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects.",
+      "raw_answer": "Based on the provided context, published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7881113290786743,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "8.1 Pregnancy\nRisk Summary\nPublished epidemiological studies with oral acetaminophen use during pregnancy have not reported a \nclear association with acetaminophen use and birth defects, miscarriage, or adverse maternal or fetal \noutcomes [see Data]. Animal reproduction studies have not been conducted with IV acetaminophen. \nReproductive and developmental studies in rats and mice from the published literature identified adverse"
+        },
+        {
+          "id": 2,
+          "text": "8.1 Pregnancy\nRisk Summary\nPublished epidemiological studies with oral acetaminophen use during pregnancy have not reported a \nclear association with acetaminophen use and birth defects, miscarriage, or adverse maternal or fetal \noutcomes [see Data]. Animal reproduction studies have not been conducted with IV acetaminophen. \nReproductive and developmental studies in rats and mice from the published literature identified adverse"
+        },
+        {
+          "id": 3,
+          "text": "8.1 Pregnancy\nRisk Summary\nPublished epidemiological studies with oral acetaminophen use during pregnancy have not reported a \nclear association with acetaminophen use and birth defects, miscarriage, or adverse maternal or fetal \noutcomes [see Data]. Animal reproduction studies have not been conducted with IV acetaminophen. \nReproductive and developmental studies in rats and mice from the published literature identified adverse"
+        }
+      ],
+      "latency_s": 9.8,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer captures the main fact regarding birth defects from the reference, but omits secondary details such as miscarriage or adverse maternal/fetal outcomes."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by the provided documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, published epidemiological studies with oral acetaminophen use during pregnancy have not reported a clear association with acetaminophen use and birth defects."
+        ]
+      }
+    },
+    {
+      "id": "q29",
+      "question": "Does acetaminophen pass into breast milk?",
+      "answerable": true,
+      "reference_answer": "Limited published studies report that it passes rapidly into human milk with similar levels in milk and plasma.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, limited published studies report that acetaminophen passes rapidly into human milk with similar levels in the milk and plasma. However, there is no information regarding the effects on the breastfed infant.",
+      "raw_answer": "Based on the provided context, limited published studies report that acetaminophen passes rapidly into human milk with similar levels in the milk and plasma. However, there is no information regarding the effects on the breastfed infant.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7052990198135376,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "increased percentage of abnormal sperm, and reduced birth weights in the next generation pups.\n8.2 Lactation\nRisk Summary\nThere is no information regarding the presence of acetaminophen in human milk, the effects on the \nbreastfed infant, or the effects on milk production. However, limited published studies report that \nacetaminophen passes rapidly into human milk with similar levels in the milk and plasma. Average and"
+        },
+        {
+          "id": 2,
+          "text": "increased percentage of abnormal sperm, and reduced birth weights in the next generation pups.\n8.2 Lactation\nRisk Summary\nThere is no information regarding the presence of acetaminophen in human milk, the effects on the \nbreastfed infant, or the effects on milk production. However, limited published studies report that \nacetaminophen passes rapidly into human milk with similar levels in the milk and plasma. Average and"
+        },
+        {
+          "id": 3,
+          "text": "increased percentage of abnormal sperm, and reduced birth weights in the next generation pups.\n8.2 Lactation\nRisk Summary\nThere is no information regarding the presence of acetaminophen in human milk, the effects on the \nbreastfed infant, or the effects on milk production. However, limited published studies report that \nacetaminophen passes rapidly into human milk with similar levels in the milk and plasma. Average and"
+        }
+      ],
+      "latency_s": 10.24,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, limited published studies report that acetaminophen passes rapidly into human milk with similar levels in the milk and plasma.",
+          "However, there is no information regarding the effects on the breastfed infant."
+        ]
+      }
+    },
+    {
+      "id": "q30",
+      "question": "Can acetaminophen affect fertility?",
+      "answerable": true,
+      "reference_answer": "Based on animal data it may cause reduced fertility in males and females of reproductive potential; reversibility is unknown.",
+      "rank": 1,
+      "answer_text": "Based on animal data, the use of acetaminophen may cause reduced fertility in both males and females of reproductive potential. It is not currently known whether these effects on fertility are reversible.",
+      "raw_answer": "Based on animal data, the use of acetaminophen may cause reduced fertility in both males and females of reproductive potential. It is not currently known whether these effects on fertility are reversible.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.8386515378952026,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "along with the mother’s clinical need for Acetaminophen Injection and any potential adverse effects on \nthe breastfed infant from Acetaminophen Injection or from the underlying maternal condition.\n8.3 Females and Males of Reproductive Potential\nBased on animal data use of acetaminophen may cause reduced fertility in males and females of \nreproductive potential. It is not known whether these effects on fertility are reversible. Published animal"
+        },
+        {
+          "id": 2,
+          "text": "along with the mother’s clinical need for Acetaminophen Injection and any potential adverse effects on \nthe breastfed infant from Acetaminophen Injection or from the underlying maternal condition.\n8.3 Females and Males of Reproductive Potential\nBased on animal data use of acetaminophen may cause reduced fertility in males and females of \nreproductive potential. It is not known whether these effects on fertility are reversible. Published animal"
+        },
+        {
+          "id": 3,
+          "text": "along with the mother’s clinical need for Acetaminophen Injection and any potential adverse effects on \nthe breastfed infant from Acetaminophen Injection or from the underlying maternal condition.\n8.3 Females and Males of Reproductive Potential\nBased on animal data use of acetaminophen may cause reduced fertility in males and females of \nreproductive potential. It is not known whether these effects on fertility are reversible. Published animal"
+        }
+      ],
+      "latency_s": 8.34,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly and completely states all key facts from the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on animal data, the use of acetaminophen may cause reduced fertility in both males and females of reproductive potential.",
+          "It is not currently known whether these effects on fertility are reversible."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Directly stated in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on animal data, the use of acetaminophen may cause reduced fertility in both males and females of reproductive potential.",
+          "It is not currently known whether these effects on fertility are reversible."
+        ]
+      }
+    },
+    {
+      "id": "q31",
+      "question": "Has the injection been shown to work for acute pain in children younger than 2?",
+      "answerable": true,
+      "reference_answer": "No. Effectiveness for acute pain in patients younger than 2 years has not been established; a placebo-controlled study of 198 such patients did not show efficacy.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, the effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger than 2 years of age has not been established, and efficacy was not demonstrated in a double-blind, placebo-controlled study.",
+      "raw_answer": "Based on the provided context, the effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger than 2 years of age has not been established, and efficacy was not demonstrated in a double-blind, placebo-controlled study.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7527498006820679,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "The effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger \nthan 2 years of age has not been established. \nIn patients younger than 2 years, efficacy was not demonstrated in a double-blind, placebo-controlled \nstudy of 198 pediatric patients younger than 2 years. Pediatric patients less than 2 years of age, including \nneonates from 28 to 40 weeks gestational age at birth, were randomized to receive opioid plus"
+        },
+        {
+          "id": 2,
+          "text": "The effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger \nthan 2 years of age has not been established. \nIn patients younger than 2 years, efficacy was not demonstrated in a double-blind, placebo-controlled \nstudy of 198 pediatric patients younger than 2 years. Pediatric patients less than 2 years of age, including \nneonates from 28 to 40 weeks gestational age at birth, were randomized to receive opioid plus"
+        },
+        {
+          "id": 3,
+          "text": "The effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger \nthan 2 years of age has not been established. \nIn patients younger than 2 years, efficacy was not demonstrated in a double-blind, placebo-controlled \nstudy of 198 pediatric patients younger than 2 years. Pediatric patients less than 2 years of age, including \nneonates from 28 to 40 weeks gestational age at birth, were randomized to receive opioid plus"
+        }
+      ],
+      "latency_s": 8.86,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer correctly and completely captures all key facts from the reference, including the lack of established effectiveness for acute pain in children under 2 and the placebo-controlled study of 198 patients."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All claims in sentence 1 are directly supported by the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger than 2 years of age has not been established, and efficacy was not demonstrated in a double-blind, placebo-controlled study."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All claims in sentence 1 are directly supported by the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the effectiveness of Acetaminophen Injection for the treatment of acute pain in pediatric patients younger than 2 years of age has not been established, and efficacy was not demonstrated in a double-blind, placebo-controlled study."
+        ]
+      }
+    },
+    {
+      "id": "q32",
+      "question": "What share of clinical study subjects were 65 or older?",
+      "answerable": true,
+      "reference_answer": "15% were 65 and over, and 5% were 75 and over.",
+      "rank": null,
+      "answer_text": "Based on the provided context, there is no mention of the share of clinical study subjects who were 65 or older (the text only mentions that 5% were age 75 and over). Therefore, I don't know the answer.",
+      "raw_answer": "Based on the provided context, there is no mention of the share of clinical study subjects who were 65 or older (the text only mentions that 5% were age 75 and over). Therefore, I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.42223718762397766,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "while 5% were age 75 and over. No overall differences in safety or effectiveness were observed between \nthese subjects and younger subjects, and other reported clinical experience has not identified differences \nin responses between the elderly and younger patients, but greater sensitivity of some older individuals \ncannot be ruled out.\n8.6 Patients with Hepatic Impairment\nAcetaminophen is contraindicated in patients with severe hepatic impairment or severe active liver disease"
+        },
+        {
+          "id": 2,
+          "text": "while 5% were age 75 and over. No overall differences in safety or effectiveness were observed between \nthese subjects and younger subjects, and other reported clinical experience has not identified differences \nin responses between the elderly and younger patients, but greater sensitivity of some older individuals \ncannot be ruled out.\n8.6 Patients with Hepatic Impairment\nAcetaminophen is contraindicated in patients with severe hepatic impairment or severe active liver disease"
+        },
+        {
+          "id": 3,
+          "text": "while 5% were age 75 and over. No overall differences in safety or effectiveness were observed between \nthese subjects and younger subjects, and other reported clinical experience has not identified differences \nin responses between the elderly and younger patients, but greater sensitivity of some older individuals \ncannot be ruled out.\n8.6 Patients with Hepatic Impairment\nAcetaminophen is contraindicated in patients with severe hepatic impairment or severe active liver disease"
+        }
+      ],
+      "latency_s": 9.91,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The text only states that 5% were age 75 and over, making no mention of the share aged 65 or older."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Correctly states it does not know based on the limited information in the context."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, there is no mention of the share of clinical study subjects who were 65 or older (the text only mentions that 5% were age 75 and over).",
+          "Therefore, I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q33",
+      "question": "How should dosing change for severe kidney impairment?",
+      "answerable": true,
+      "reference_answer": "For severe renal impairment (CrCl 30 mL/min or less), longer dosing intervals and a reduced total daily dose may be warranted.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6439121961593628,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "8.7 Patients with Renal Impairment\n10 OVERDOSAGE\n11 DESCRIPTION\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\n12.2 Pharmacodynamics\n12.3 Pharmacokinetics\n13 NONCLINICAL TOXICOLOGY\n13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\n14 CLINICAL STUDIES\n14.1 Adult Acute Pain\n14.2 Adult Fever\n14.3 Pediatric Acute Pain and Fever\n16 HOW SUPPLIED/STORAGE AND HANDLING\n*Sections or subsections omitted from the full prescribing information are \nnot listed.\nReference ID: 4993684"
+        },
+        {
+          "id": 2,
+          "text": "8.7 Patients with Renal Impairment\n10 OVERDOSAGE\n11 DESCRIPTION\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\n12.2 Pharmacodynamics\n12.3 Pharmacokinetics\n13 NONCLINICAL TOXICOLOGY\n13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\n14 CLINICAL STUDIES\n14.1 Adult Acute Pain\n14.2 Adult Fever\n14.3 Pediatric Acute Pain and Fever\n16 HOW SUPPLIED/STORAGE AND HANDLING\n*Sections or subsections omitted from the full prescribing information are \nnot listed.\nReference ID: 4993684"
+        },
+        {
+          "id": 3,
+          "text": "8.7 Patients with Renal Impairment\n10 OVERDOSAGE\n11 DESCRIPTION\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\n12.2 Pharmacodynamics\n12.3 Pharmacokinetics\n13 NONCLINICAL TOXICOLOGY\n13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\n14 CLINICAL STUDIES\n14.1 Adult Acute Pain\n14.2 Adult Fever\n14.3 Pediatric Acute Pain and Fever\n16 HOW SUPPLIED/STORAGE AND HANDLING\n*Sections or subsections omitted from the full prescribing information are \nnot listed.\nReference ID: 4993684"
+        }
+      ],
+      "latency_s": 1.8,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q34",
+      "question": "Besides liver necrosis, what else can occur in acute acetaminophen overdose?",
+      "answerable": true,
+      "reference_answer": "Renal tubular necrosis, hypoglycemic coma, and thrombocytopenia.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, the other signs and symptoms that can occur in acute acetaminophen overdose are:\n\n* Renal tubular necrosis\n* Hypoglycemic coma\n* Thrombocytopenia",
+      "raw_answer": "Based on the provided context, the other signs and symptoms that can occur in acute acetaminophen overdose are:\n\n* Renal tubular necrosis\n* Hypoglycemic coma\n* Thrombocytopenia",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7976469993591309,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "10 OVERDOSAGE\nSigns and Symptoms\nIn acute acetaminophen overdosage, dose-dependent, potentially fatal hepatic necrosis is the most serious \nadverse effect. Renal tubular necrosis, hypoglycemic coma, and thrombocytopenia may also occur. \nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "10 OVERDOSAGE\nSigns and Symptoms\nIn acute acetaminophen overdosage, dose-dependent, potentially fatal hepatic necrosis is the most serious \nadverse effect. Renal tubular necrosis, hypoglycemic coma, and thrombocytopenia may also occur. \nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "10 OVERDOSAGE\nSigns and Symptoms\nIn acute acetaminophen overdosage, dose-dependent, potentially fatal hepatic necrosis is the most serious \nadverse effect. Renal tubular necrosis, hypoglycemic coma, and thrombocytopenia may also occur. \nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 9.38,
+      "correctness": {
+        "score": 3,
+        "reason": "The system answer completely matches the reference answer by stating renal tubular necrosis, hypoglycemic coma, and thrombocytopenia."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Introductory statement supported by the context."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Renal tubular necrosis is explicitly mentioned in the documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Hypoglycemic coma is explicitly mentioned in the documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Thrombocytopenia is explicitly mentioned in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the other signs and symptoms that can occur in acute acetaminophen overdose are:",
+          "* Renal tubular necrosis",
+          "* Hypoglycemic coma",
+          "* Thrombocytopenia"
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Introductory statement supported by the context."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Renal tubular necrosis is explicitly mentioned in the documents."
+          },
+          {
+            "n": 3,
+            "supported": true,
+            "reason": "Hypoglycemic coma is explicitly mentioned in the documents."
+          },
+          {
+            "n": 4,
+            "supported": true,
+            "reason": "Thrombocytopenia is explicitly mentioned in the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the other signs and symptoms that can occur in acute acetaminophen overdose are:",
+          "* Renal tubular necrosis",
+          "* Hypoglycemic coma",
+          "* Thrombocytopenia"
+        ]
+      }
+    },
+    {
+      "id": "q35",
+      "question": "What is the antidote for acetaminophen overdose?",
+      "answerable": true,
+      "reference_answer": "N-acetylcysteine (NAC), given as early as possible.",
+      "rank": 1,
+      "answer_text": "The antidote for acetaminophen overdose is N-acetylcysteine (NAC).",
+      "raw_answer": "The antidote for acetaminophen overdose is N-acetylcysteine (NAC).",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6540132761001587,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "Clinical and laboratory evidence of hepatic toxicity may not be apparent until 48 to 72 hours post-\ningestion.\nTreatment\nIf an acetaminophen overdose is suspected, obtain a serum acetaminophen assay as soon as possible, but \nno sooner than 4 hours following oral ingestion. Obtain liver function studies initially and repeat at \n24-hour intervals. Administer the antidote N-acetylcysteine (NAC) as early as possible. As a guide to"
+        },
+        {
+          "id": 2,
+          "text": "Clinical and laboratory evidence of hepatic toxicity may not be apparent until 48 to 72 hours post-\ningestion.\nTreatment\nIf an acetaminophen overdose is suspected, obtain a serum acetaminophen assay as soon as possible, but \nno sooner than 4 hours following oral ingestion. Obtain liver function studies initially and repeat at \n24-hour intervals. Administer the antidote N-acetylcysteine (NAC) as early as possible. As a guide to"
+        },
+        {
+          "id": 3,
+          "text": "Clinical and laboratory evidence of hepatic toxicity may not be apparent until 48 to 72 hours post-\ningestion.\nTreatment\nIf an acetaminophen overdose is suspected, obtain a serum acetaminophen assay as soon as possible, but \nno sooner than 4 hours following oral ingestion. Obtain liver function studies initially and repeat at \n24-hour intervals. Administer the antidote N-acetylcysteine (NAC) as early as possible. As a guide to"
+        }
+      ],
+      "latency_s": 9.71,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer correctly identifies the antidote as N-acetylcysteine (NAC), but misses the secondary detail from the reference that it should be given as early as possible."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents state to administer the antidote N-acetylcysteine (NAC)."
+          }
+        ],
+        "sentences": [
+          "The antidote for acetaminophen overdose is N-acetylcysteine (NAC)."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The documents state to administer the antidote N-acetylcysteine (NAC)."
+          }
+        ],
+        "sentences": [
+          "The antidote for acetaminophen overdose is N-acetylcysteine (NAC)."
+        ]
+      }
+    },
+    {
+      "id": "q36",
+      "question": "Which nomogram is used to guide treatment of acute acetaminophen ingestion?",
+      "answerable": true,
+      "reference_answer": "The Rumack-Matthew nomogram; the lower toxic line is 150 mcg/mL at 4 hours and 37.5 mcg/mL at 12 hours.",
+      "rank": 1,
+      "answer_text": "The Rumack-Matthew nomogram is used to guide treatment of acute acetaminophen ingestion.",
+      "raw_answer": "The Rumack-Matthew nomogram is used to guide treatment of acute acetaminophen ingestion.",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7304831147193909,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "treatment of acute ingestion, the acetaminophen level can be plotted against time since oral ingestion on a \nnomogram (Rumack-Matthew). The lower toxic line on the nomogram is equivalent to 150 mcg/mL at \n4 hours and 37.5 mcg/mL at 12 hours. If serum level is above the lower line, administer the entire course \nof NAC treatment. Withhold NAC therapy if the acetaminophen level is below the lower line.\nFor additional information, call a poison control center at 1-800-222-1222.\n11 DESCRIPTION"
+        },
+        {
+          "id": 2,
+          "text": "treatment of acute ingestion, the acetaminophen level can be plotted against time since oral ingestion on a \nnomogram (Rumack-Matthew). The lower toxic line on the nomogram is equivalent to 150 mcg/mL at \n4 hours and 37.5 mcg/mL at 12 hours. If serum level is above the lower line, administer the entire course \nof NAC treatment. Withhold NAC therapy if the acetaminophen level is below the lower line.\nFor additional information, call a poison control center at 1-800-222-1222.\n11 DESCRIPTION"
+        },
+        {
+          "id": 3,
+          "text": "treatment of acute ingestion, the acetaminophen level can be plotted against time since oral ingestion on a \nnomogram (Rumack-Matthew). The lower toxic line on the nomogram is equivalent to 150 mcg/mL at \n4 hours and 37.5 mcg/mL at 12 hours. If serum level is above the lower line, administer the entire course \nof NAC treatment. Withhold NAC therapy if the acetaminophen level is below the lower line.\nFor additional information, call a poison control center at 1-800-222-1222.\n11 DESCRIPTION"
+        }
+      ],
+      "latency_s": 9.96,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer correctly identifies the Rumack-Matthew nomogram, but misses the secondary detail regarding the specific toxic line values (150 mcg/mL at 4 hours and 37.5 mcg/mL at 12 hours) provided in the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by document [1]."
+          }
+        ],
+        "sentences": [
+          "The Rumack-Matthew nomogram is used to guide treatment of acute acetaminophen ingestion."
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Directly supported by document [1]."
+          }
+        ],
+        "sentences": [
+          "The Rumack-Matthew nomogram is used to guide treatment of acute acetaminophen ingestion."
+        ]
+      }
+    },
+    {
+      "id": "q37",
+      "question": "What is the pH and osmolality of the formulation?",
+      "answerable": true,
+      "reference_answer": "pH approximately 5.5 and osmolality approximately 290 mOsm/kg.",
+      "rank": null,
+      "answer_text": "Based on the provided context, the osmolality is approximately 290 mOsm/kg, and the pH is adjusted with hydrochloric acid and/or sodium hydroxide (the exact numerical pH value is not stated).",
+      "raw_answer": "Based on the provided context, the osmolality is approximately 290 mOsm/kg, and the pH is adjusted with hydrochloric acid and/or sodium hydroxide (the exact numerical pH value is not stated).",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.4564109742641449,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "approximately 290 mOsm/kg. Each 100 mL contains 1,000 mg acetaminophen, USP, citric acid \nanhydrous, USP, sodium chloride, USP and water for injection, USP. pH is adjusted with hydrochloric \nacid and/or sodium hydroxide.\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\nThe precise mechanism of the analgesic and antipyretic properties of acetaminophen is not established but \nis thought to primarily involve central actions.\n12.2 Pharmacodynamics"
+        },
+        {
+          "id": 2,
+          "text": "approximately 290 mOsm/kg. Each 100 mL contains 1,000 mg acetaminophen, USP, citric acid \nanhydrous, USP, sodium chloride, USP and water for injection, USP. pH is adjusted with hydrochloric \nacid and/or sodium hydroxide.\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\nThe precise mechanism of the analgesic and antipyretic properties of acetaminophen is not established but \nis thought to primarily involve central actions.\n12.2 Pharmacodynamics"
+        },
+        {
+          "id": 3,
+          "text": "approximately 290 mOsm/kg. Each 100 mL contains 1,000 mg acetaminophen, USP, citric acid \nanhydrous, USP, sodium chloride, USP and water for injection, USP. pH is adjusted with hydrochloric \nacid and/or sodium hydroxide.\n12 CLINICAL PHARMACOLOGY\n12.1 Mechanism of Action\nThe precise mechanism of the analgesic and antipyretic properties of acetaminophen is not established but \nis thought to primarily involve central actions.\n12.2 Pharmacodynamics"
+        }
+      ],
+      "latency_s": 9.58,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "All claims about osmolality, pH adjustment, and lack of numerical pH value are directly supported by the documents."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the osmolality is approximately 290 mOsm/kg, and the pH is adjusted with hydrochloric acid and/or sodium hydroxide (the exact numerical pH value is not stated)."
+        ]
+      }
+    },
+    {
+      "id": "q38",
+      "question": "What is the terminal half-life of the injection in adults?",
+      "answerable": true,
+      "reference_answer": "Mean 2.4 hours (SD 0.6) in adults.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.485561728477478,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 2,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 3,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        }
+      ],
+      "latency_s": 11.23,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Sentence has no factual claim."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q39",
+      "question": "How does peak concentration after IV infusion compare to the same oral dose?",
+      "answerable": true,
+      "reference_answer": "Cmax is up to 70% higher with the injection, while overall exposure (AUC) is very similar.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.528050422668457,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "same doses. These effects appear to increase with the duration of treatment.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "same doses. These effects appear to increase with the duration of treatment.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "same doses. These effects appear to increase with the duration of treatment.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 7.06,
+      "correctness": {
+        "score": 0,
+        "reason": "refused"
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "q40",
+      "question": "How long can the product be used after the bag is pierced, and at what temperature should it be stored?",
+      "answerable": true,
+      "reference_answer": "Use within 4 hours after piercing; store at 20°C to 25°C (68°F to 77°F) and do not refrigerate or freeze.",
+      "rank": 1,
+      "answer_text": "Based on the provided context, the product must be used within 4 hours after the bags are pierced (though immediate use is recommended). Regarding storage temperature, the instructions state: \"Do not refrigerate or freeze.\"",
+      "raw_answer": "Based on the provided context, the product must be used within 4 hours after the bags are pierced (though immediate use is recommended). Regarding storage temperature, the instructions state: \"Do not refrigerate or freeze.\"",
+      "refused": false,
+      "refusal_reason": null,
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7661191821098328,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "24 hours. The product must be used within 4 hours after the bags are pierced. However, immediate use of \nthe pierced bags is recommended. Do not refrigerate or freeze.\nManufactured by:\nHIKMA FARMACÊUTICA (PORTUGAL), S.A.\nEstrada do Rio da Mó, 8, 8A e 8B – Fervença – 2705-906 Terrugem SNT, PORTUGAL\nDistributed by:\nHikma Pharmaceuticals USA Inc.\nBerkeley Heights, NJ 07922\nPIN571-WES/1\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        },
+        {
+          "id": 2,
+          "text": "24 hours. The product must be used within 4 hours after the bags are pierced. However, immediate use of \nthe pierced bags is recommended. Do not refrigerate or freeze.\nManufactured by:\nHIKMA FARMACÊUTICA (PORTUGAL), S.A.\nEstrada do Rio da Mó, 8, 8A e 8B – Fervença – 2705-906 Terrugem SNT, PORTUGAL\nDistributed by:\nHikma Pharmaceuticals USA Inc.\nBerkeley Heights, NJ 07922\nPIN571-WES/1\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        },
+        {
+          "id": 3,
+          "text": "24 hours. The product must be used within 4 hours after the bags are pierced. However, immediate use of \nthe pierced bags is recommended. Do not refrigerate or freeze.\nManufactured by:\nHIKMA FARMACÊUTICA (PORTUGAL), S.A.\nEstrada do Rio da Mó, 8, 8A e 8B – Fervença – 2705-906 Terrugem SNT, PORTUGAL\nDistributed by:\nHikma Pharmaceuticals USA Inc.\nBerkeley Heights, NJ 07922\nPIN571-WES/1\nReference ID: 4993684\nThis label may not be the latest approved by FDA."
+        }
+      ],
+      "latency_s": 10.59,
+      "correctness": {
+        "score": 2,
+        "reason": "The system answer correctly identifies the usage time after piercing (4 hours) and storage conditions (do not refrigerate or freeze), but it misses the specific numerical temperature range (20°C to 25°C) mentioned in the reference answer."
+      },
+      "faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Matches the provided documents regarding usage within 4 hours."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Accurately quotes the documents regarding storage instructions."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the product must be used within 4 hours after the bags are pierced (though immediate use is recommended).",
+          "Regarding storage temperature, the instructions state: \"Do not refrigerate or freeze.\""
+        ]
+      },
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "Matches the provided documents regarding usage within 4 hours."
+          },
+          {
+            "n": 2,
+            "supported": true,
+            "reason": "Accurately quotes the documents regarding storage instructions."
+          }
+        ],
+        "sentences": [
+          "Based on the provided context, the product must be used within 4 hours after the bags are pierced (though immediate use is recommended).",
+          "Regarding storage temperature, the instructions state: \"Do not refrigerate or freeze.\""
+        ]
+      }
+    },
+    {
+      "id": "u01",
+      "question": "What is the recommended adult dose of ibuprofen tablets?",
+      "answerable": false,
+      "reference_answer": "Not in the documents (they only cover Acetaminophen Injection).",
+      "rank": null,
+      "answer_text": "I don't know the answer, as the provided context only contains dosing information for acetaminophen and does not mention ibuprofen tablets.",
+      "raw_answer": "I don't know the answer, as the provided context only contains dosing information for acetaminophen and does not mention ibuprofen tablets.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5918562412261963,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "Table 1. Dosing for Adults and Adolescents\nAge group Dose given every 4 hours Dose given every 6 hours Maximum single dose Maximum total daily dose of acetaminophen (by all routes)\nAdults and \nadolescents (13 \nyears and older) \nweighing greater\nthan or equal to\n50 kg \n650 mg 1,000 mg 1,000 mg 4,000 mg in 24 hours\nAdults and \nadolescents (13 \nyears and older) \nweighing less \nthan 50 kg\n12.5 mg/kg 15 mg/kg 15 mg/kg(up to 750 mg) 75 mg/kg in24 hours(up to 3,750 mg)\n2.3 Recommended Dosage: Children"
+        },
+        {
+          "id": 2,
+          "text": "Table 1. Dosing for Adults and Adolescents\nAge group Dose given every 4 hours Dose given every 6 hours Maximum single dose Maximum total daily dose of acetaminophen (by all routes)\nAdults and \nadolescents (13 \nyears and older) \nweighing greater\nthan or equal to\n50 kg \n650 mg 1,000 mg 1,000 mg 4,000 mg in 24 hours\nAdults and \nadolescents (13 \nyears and older) \nweighing less \nthan 50 kg\n12.5 mg/kg 15 mg/kg 15 mg/kg(up to 750 mg) 75 mg/kg in24 hours(up to 3,750 mg)\n2.3 Recommended Dosage: Children"
+        },
+        {
+          "id": 3,
+          "text": "Table 1. Dosing for Adults and Adolescents\nAge group Dose given every 4 hours Dose given every 6 hours Maximum single dose Maximum total daily dose of acetaminophen (by all routes)\nAdults and \nadolescents (13 \nyears and older) \nweighing greater\nthan or equal to\n50 kg \n650 mg 1,000 mg 1,000 mg 4,000 mg in 24 hours\nAdults and \nadolescents (13 \nyears and older) \nweighing less \nthan 50 kg\n12.5 mg/kg 15 mg/kg 15 mg/kg(up to 750 mg) 75 mg/kg in24 hours(up to 3,750 mg)\n2.3 Recommended Dosage: Children"
+        }
+      ],
+      "latency_s": 46.26,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "The sentence expresses a lack of knowledge based on the provided context not mentioning ibuprofen, which is correct since the context only contains acetaminophen dosing."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer, as the provided context only contains dosing information for acetaminophen and does not mention ibuprofen tablets."
+        ]
+      }
+    },
+    {
+      "id": "u02",
+      "question": "What is the maximum daily dose of metformin?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6179905533790588,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "1,000 mg every 6 hours or 650 mg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 1,000 mg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 4,000 mg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "1,000 mg every 6 hours or 650 mg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 1,000 mg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 4,000 mg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "1,000 mg every 6 hours or 650 mg every 4 hours, with a maximum single dose of Acetaminophen \nInjection of 1,000 mg, a minimum dosing interval of 4 hours, and a maximum daily dose of \nacetaminophen of 4,000 mg per day (includes all routes of administration and all \nacetaminophen-containing products including combination products).\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 0.87,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u03",
+      "question": "What dose should be used for premature neonates born before 32 weeks gestational age?",
+      "answerable": false,
+      "reference_answer": "Not in the documents; dosing is only given for neonates born at 32 weeks or later.",
+      "rank": null,
+      "answer_text": "I don't know the answer based on the provided context.",
+      "raw_answer": "I don't know the answer based on the provided context.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5796792507171631,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 2,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        },
+        {
+          "id": 3,
+          "text": "75 mg/kg per day. Minimum dosing interval of 4 hours. (2.2)\nChildren:\n• Children 2 to 12 years of age: 15 mg/kg every 6 hours or 12.5 mg/kg every \n4 hours to a maximum of 75 mg/kg per day. Minimum dosing interval of \n4 hours. (2.3)\nNeonates and Infants:\n• Neonates including premature neonates born at greater than or equal to 32\nweeks gestational age to 28 days chronological age, 12.5 mg/kg every 6 \nhours to a maximum of 50 mg/kg per day. Minimum dosing interval of 6 \nhours. (2.4)"
+        }
+      ],
+      "latency_s": 7.59,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer based on the provided context."
+        ]
+      }
+    },
+    {
+      "id": "u04",
+      "question": "How much does a carton of Acetaminophen Injection cost?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.639999508857727,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 0.87,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u05",
+      "question": "Does Acetaminophen Injection interact with amoxicillin?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know.",
+      "raw_answer": "I don't know.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5949172973632812,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 2,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        },
+        {
+          "id": 3,
+          "text": "12.3 Pharmacokinetics\nDistribution\nThe pharmacokinetics of Acetaminophen Injection have been studied in patients and healthy subjects up \nto 60 years old. The pharmacokinetic profile of Acetaminophen Injection has been demonstrated to be \ndose proportional in adults following administration of single doses of500, 650, and 1,000 mg.\nThe maximum concentration (Cmax) occurs at the end of the 15-minute intravenous infusion of"
+        }
+      ],
+      "latency_s": 7.96,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know."
+        ]
+      }
+    },
+    {
+      "id": "u06",
+      "question": "What is the terminal half-life of Acetaminophen Injection in patients over 80 years old?",
+      "answerable": false,
+      "reference_answer": "Not in the documents; half-life is only reported for children, adolescents, and adults.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7099388837814331,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        },
+        {
+          "id": 2,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        },
+        {
+          "id": 3,
+          "text": "adequate and well-controlled studies of Acetaminophen Injection in adults, clinical studies in \n244 pediatric patients 2 years and older, and safety and pharmacokinetic data from 239 patients younger\nthan 2 years including neonates greater than or equal to 32 weeks gestational age.\n8.5 Geriatric Use\nOf the total number of subjects in clinical studies of Acetaminophen Injection, 15% were age 65 and over,"
+        }
+      ],
+      "latency_s": 9.09,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u07",
+      "question": "What dose of acetaminophen is safe for a dog?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.6449775695800781,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 2,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        },
+        {
+          "id": 3,
+          "text": "formulation containing 1,000 mg of acetaminophen in 100 mL (10 mg/mL) in single-dose bags.\nReference ID: 4993684\nThis label may not be the latest approved by FDA.  \nFor current labeling information, please visit https://www.fda.gov/drugsatfda"
+        }
+      ],
+      "latency_s": 7.48,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u08",
+      "question": "Can I drink grapefruit juice while receiving Acetaminophen Injection?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.5405405759811401,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        },
+        {
+          "id": 2,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        },
+        {
+          "id": 3,
+          "text": "• Use caution when administering acetaminophen in patients with the \nfollowing conditions: hepatic impairment or active hepatic disease, in cases \nof alcoholism, chronic malnutrition, severe hypovolemia, or severe renal \nimpairment (creatinine clearance less than or equal to 30 mL/min). (5.1)\n• Discontinue Acetaminophen Injection immediately at the first appearance \nof skin rash and if symptoms associated with allergy or hypersensitivity"
+        }
+      ],
+      "latency_s": 5.8,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u09",
+      "question": "What are the side effects of the COVID-19 vaccine?",
+      "answerable": false,
+      "reference_answer": "Not in the documents.",
+      "rank": null,
+      "answer_text": "I don't know the answer.",
+      "raw_answer": "I don't know the answer.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.3763590157032013,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        },
+        {
+          "id": 2,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        },
+        {
+          "id": 3,
+          "text": "5 WARNINGS AND PRECAUTIONS\n5.1 Hepatic Injury\n5.2 Serious Skin Reactions\n5.3 Risk of Medication Errors\n5.4 Allergy and Hypersensitivity\n6 ADVERSE REACTIONS\n6.1 Clinical Trials Experience\n7 DRUG INTERACTIONS\n7.1 Effects of Other Substances on Acetaminophen\n7.2 Anticoagulants\n8 USE IN SPECIFIC POPULATIONS\n8.1 Pregnancy\n8.2 Lactation\n8.3 Females and Males of Reproductive Potential\n8.4 Pediatric Use\n8.5 Geriatric Use\n8.6 Patients with Hepatic Impairment\n8.7 Patients with Renal Impairment"
+        }
+      ],
+      "latency_s": 3.58,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim made."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer."
+        ]
+      }
+    },
+    {
+      "id": "u10",
+      "question": "What is the recommended rectal suppository dose of acetaminophen for children?",
+      "answerable": false,
+      "reference_answer": "Not in the documents; they only describe the intravenous injection.",
+      "rank": null,
+      "answer_text": "I don't know the answer based on the provided context.",
+      "raw_answer": "I don't know the answer based on the provided context.",
+      "refused": true,
+      "refusal_reason": "model_said_unknown",
+      "unsupported_sentences": [],
+      "retrieval": {
+        "best_vector_score": 0.7166373133659363,
+        "best_rerank_score": null
+      },
+      "source_pages": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "shown_sources": [
+        {
+          "id": 1,
+          "text": "2.3 Recommended Dosage: Children\nChildren 2 to 12 years of age: the recommended dosage of Acetaminophen Injection is 15 mg/kg every \n6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen Injection of \n15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of acetaminophen of \n75 mg/kg per day.\nTable 2. Dosing for Children"
+        },
+        {
+          "id": 2,
+          "text": "2.3 Recommended Dosage: Children\nChildren 2 to 12 years of age: the recommended dosage of Acetaminophen Injection is 15 mg/kg every \n6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen Injection of \n15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of acetaminophen of \n75 mg/kg per day.\nTable 2. Dosing for Children"
+        },
+        {
+          "id": 3,
+          "text": "2.3 Recommended Dosage: Children\nChildren 2 to 12 years of age: the recommended dosage of Acetaminophen Injection is 15 mg/kg every \n6 hours or 12.5 mg/kg every 4 hours, with a maximum single dose of Acetaminophen Injection of \n15 mg/kg, a minimum dosing interval of 4 hours, and a maximum daily dose of acetaminophen of \n75 mg/kg per day.\nTable 2. Dosing for Children"
+        }
+      ],
+      "latency_s": 2.95,
+      "raw_faithfulness": {
+        "score": 1.0,
+        "verdicts": [
+          {
+            "n": 1,
+            "supported": true,
+            "reason": "No factual claim to evaluate."
+          }
+        ],
+        "sentences": [
+          "I don't know the answer based on the provided context."
+        ]
+      }
+    }
+  ]
+}

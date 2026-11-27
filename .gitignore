@@ -21,7 +21,6 @@ data/*.txt
 *.log
 *.tmp
 *.bak
-evlaution/questions.jsonl
 # Jupyter notebooks checkpoints
 .ipynb_checkpoints/
 
@@ -34,3 +33,7 @@ Thumbs.db
 
 
 notebooks
+/resume
+# Evaluation resume checkpoints (per-question rows are kept in e2e_*.json)
+evaluation/results/*.answers.jsonl
+evaluation/results/*.judged.jsonl

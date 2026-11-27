@@ -161,14 +161,59 @@ are rejected.
 }
 ```
 
-The response contains the generated answer and retrieved source text:
+The response contains the guarded answer (always ending with the "Not medical
+advice" disclaimer), whether the system refused, and the retrieved sources with
+their drug, section, and page:
 
 ```json
 {
-  "answer": "...",
-  "sources": ["..."]
+  "answer": "The maximum daily dose is 4,000 mg per day [1].\n\n⚠️ Not medical advice. ...",
+  "refused": false,
+  "refusal_reason": null,
+  "disclaimer": "⚠️ Not medical advice. ...",
+  "unsupported_sentences": [],
+  "sources": ["[Acetaminophen Injection | 2.2 Recommended Dosage: Adults and Adolescents]\n..."],
+  "citations": [{"id": 1, "drug": "Acetaminophen Injection", "section": "2.2 ...", "page": 3, "source": "file.pdf"}]
 }
 ```
+
+`[n]` markers in the answer refer to `citations[n-1]`. When the system refuses,
+`answer` is "This isn't in my documents." and `refusal_reason` is one of
+`low_retrieval_score`, `model_not_found`, or `no_supported_sentences`.
+
+## Retrieval and guardrail settings
+
+All settings are environment variables (for example in `.env`). Changing the
+embedding model or chunking strategy requires rebuilding the index with
+`python -m rag.ingest`; the index records the settings it was built with in
+`rag/faiss_index/index_config.json`, and the API reads the embedding model from there.
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `CHUNKING_STRATEGY` | `structured` | `structured` (split by headings, tables kept whole, drug/section/page metadata) or `fixed` (500-character chunks) |
+| `EMBEDDING_MODEL` | `e5-small` | also `all-MiniLM-L6-v2`, `bge-small`, `bge-base`, `e5-base`, or any sentence-transformers id |
+| `RETRIEVAL_MODE` | `hybrid` | `hybrid` (BM25 + vector, reciprocal rank fusion), `vector`, or `bm25` |
+| `RERANKER` | none | `ms-marco-MiniLM` or `bge-reranker-base`; re-scores the top `RETRIEVAL_CANDIDATES` (20) |
+| `RETRIEVAL_TOP_K` | `5` | chunks passed to the model |
+| `MIN_RETRIEVAL_SCORE` | per model (`e5-small` 0.80, MiniLM 0.30) | refuse if the best vector cosine similarity is below this. Cosine scales differ between models, so the default is calibrated per model on the eval set |
+| `MIN_RERANK_SCORE` | none | refuse if the best re-ranker score (0–1) is below this; used instead of the vector threshold when a re-ranker is on |
+| `CITATION_CHECK` | `lexical` | `lexical` (numbers must match and most words must appear in the cited chunk), `llm` (ask the model to verify each sentence), or `off` |
+| `CITATION_ACTION` | `drop` | `drop` unsupported sentences or `flag` them with `[unverified: ...]` |
+
+### How the guardrails work
+
+1. **Refuse when unsure.** If the best retrieved chunk scores below the
+   threshold, the model is not called and the answer is "This isn't in my documents."
+2. **Prompt-injection defence.** Retrieved chunks are HTML-escaped (so a document
+   cannot close or forge the `<documents>` / `<question>` tags) and wrapped in
+   `<document id=.. drug=.. section=.. page=..>` delimiters. The system prompt says
+   everything inside `<documents>` is untrusted data, never instructions.
+3. **Grounded answers.** The model must cite a chunk id on every sentence, or reply
+   `NOT_FOUND`, which becomes the refusal message.
+4. **Citation check.** Each sentence is checked against the chunk it cites. Sentences
+   whose numbers do not appear in that chunk, or with low word overlap, are dropped
+   (or flagged). If nothing survives, the system refuses.
+5. **Disclaimer.** "Not medical advice" is appended to every answer, refusals included.
 
 `GET /` is a lightweight health endpoint. If the configured model is
 unavailable, `/ask` returns HTTP 503. Invalid provider settings or missing API
@@ -183,37 +228,63 @@ Run the standard-library test suite from the repository root:
 python -m unittest discover -s tests -v
 ```
 
-## RAG evaluation
+## Offline evaluation (retrieval, LLM-as-judge, guardrails)
 
-Keep evaluation data in `evaluation\questions.jsonl`, not in `data\`, because
-all supported files in `data\` are indexed by the ingestion pipeline. The
-evaluator accepts either a JSON array or one JSON object per line. Each case
-contains a question, expected source names, and a reference answer:
+The evaluation set is `evaluation/eval_set.jsonl`: 50 questions written from the
+indexed label: 40 answerable and 10 the documents cannot answer (other drugs,
+near-misses such as dosing for neonates under 32 weeks, prices). Each answerable
+case stores the reference answer, a verbatim **evidence span**, and its page and
+section. A retrieved chunk counts as the correct chunk when it contains the
+evidence span, so hit@k stays comparable when the chunking strategy changes.
 
 ```json
-{"question":"What are common side effects of ibuprofen?","expected_sources":["ibuprofen.pdf"],"reference_answer":"Common side effects can include stomach pain, nausea, vomiting, indigestion, and diarrhea."}
+{"id": "q02", "question": "What is the largest single dose an adult over 50 kg can receive?", "answerable": true,
+ "reference_answer": "The maximum single dose is 1,000 mg.",
+ "evidence": "maximum single dose of Acetaminophen Injection of 1,000 mg", "page": 3,
+ "section": "2.2 Recommended Dosage: Adults and Adolescents", "kind": "dosage"}
 ```
 
-With FastAPI running and the relevant medical files indexed, run:
+Three scripts, run from the repository root (no API server needed):
 
 ```powershell
-python evaluation\run_evaluation.py
+# 1. Retrieval ablation: one change at a time, hit@1 / hit@5 / MRR@5. No LLM needed.
+python -m evaluation.retrieval_experiments
+
+# 2. End-to-end: correctness (LLM judge, 0-3 rubric), faithfulness, refusal accuracy
+python -m evaluation.evaluate --label final --provider gemini --model gemini-3.5-flash-lite `
+  --mode hybrid --embedding e5-small --min-vector-score 0.80
+python -m evaluation.evaluate --label baseline --provider gemini --model gemini-3.5-flash-lite `
+  --naive --chunking fixed --no-dedupe --mode vector
+
+# 3. Prompt-injection red team (poisoned documents, guarded vs naive prompt)
+python -m evaluation.injection_test --provider gemini --model gemini-3.5-flash-lite
 ```
 
-Use a different API URL or dataset when needed:
+### Running on a CPU-only laptop
 
-```powershell
-python evaluation\run_evaluation.py `
-  --api-url http://localhost:8000 `
-  --dataset evaluation\questions.jsonl
-```
+The end-to-end evaluation does **not** need a local LLM. Answers and judging go
+through an API (the free Gemini tier is enough: about 2 calls per question,
+~100 per 50-question run). The only model loaded locally is the small embedding
+model (~100–150 MB of RAM), so the run is safe on a machine with little free memory.
 
-The evaluator uses only Python's standard library and reports answer token
-overlap, expected-source matches, average latency, p95 latency, and request
-failures. Token overlap is a lightweight comparison, not a medical correctness
-score; review answers with a qualified evaluator. Since `/ask` currently
-returns source text instead of source filenames, expected-source matching is
-informative only when filenames are present in the returned text.
+- **Resumable.** Each question is appended to `evaluation/results/e2e_<label>.answers.jsonl`
+  and `.judged.jsonl` as soon as it finishes. If the run crashes, is stopped with
+  Ctrl-C, or the API quota runs out, run the same command again and it continues
+  from the next question. `--fresh` starts over.
+- **Batches.** `--ids q01 q02 ...` or `--limit 25` run part of the set.
+- **Phases.** `--phase generate` only produces answers, `--phase judge` only scores
+  saved answers, so you can re-judge later with another model (`--judge-model`).
+- **Pacing.** With Gemini, a 4-second pause between questions keeps the run under
+  the free-tier rate limit (`--sleep` overrides it). Rate-limit errors are retried
+  with back-off, and an exhausted daily quota stops the run cleanly.
+- Run one evaluation at a time. Avoid `--reranker bge-reranker-base` on small
+  machines: it needs ~1.5 GB of RAM and ~10 s per query on CPU.
+
+Outputs are written to `evaluation/results/`: JSON with per-question details,
+a Markdown table for the ablation, and `spot_check_<label>.md`, a 10-question
+sheet for checking the LLM judge by hand. The judge model can be set separately
+with `--judge-provider` / `--judge-model`; using the same model as the generator
+can bias scores upward, which is why the spot-check exists.
 
 ## Safety and limitations
 
