@@ -1,0 +1,5 @@
+{
+  "embedding_model": "e5-small",
+  "chunking": "structured",
+  "chunks": 61
+}

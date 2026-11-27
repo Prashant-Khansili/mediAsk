@@ -1,13 +1,14 @@
-
-
-
-
+---
+title: MediAsk
+emoji: 🩺
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
 
 https://github.com/user-attachments/assets/c568f253-67b6-482c-bc1d-8e2e17d25df7
-
-
-
-
 
 # MediAsk — AI Assistant for Drug Information
 
@@ -216,20 +217,116 @@ curl -X POST http://127.0.0.1:8000/ask \
 
 ### 📊 Evaluate the RAG pipeline
 
-Evaluation cases live in `evaluation\questions.jsonl`, outside `data\`, so
-they are not indexed as medical documents. The evaluator accepts either a JSON
-array or one JSON object per line. Start the API, ensure the relevant
-medical files are indexed, and run:
+The evaluation runs offline from the repository root. It builds its own
+in-memory index from `data\` and calls the pipeline code directly, so the API
+server doesn't need to be running.
 
-```powershell
-python evaluation\run_evaluation.py
+#### The question set
+
+`evaluation\eval_set.jsonl` holds 50 questions written from the indexed
+Acetaminophen Injection label:
+
+- **40 answerable.** Each stores a reference answer, plus an exact quote from
+  the label (the *evidence span*) with its page and section.
+- **10 unanswerable.** These ask about other drugs, prices, or near-misses
+  such as dosing for premature newborns, which the label doesn't cover. The
+  correct behaviour is to say the answer isn't in the documents.
+
+```json
+{"id": "q02", "question": "What is the largest single dose an adult over 50 kg can receive?",
+ "answerable": true, "reference_answer": "The maximum single dose is 1,000 mg.",
+ "evidence": "maximum single dose of Acetaminophen Injection of 1,000 mg", "page": 3,
+ "section": "2.2 Recommended Dosage: Adults and Adolescents", "kind": "dosage"}
 ```
 
-The script reports completed cases, failures, answer token overlap against the
-reference answers, expected-source matches, average latency, and p95 latency.
-The source metric is limited because `/ask` currently returns source text
-rather than source filenames; use it only when the expected filename appears
-in the returned source text.
+#### What is measured
+
+There are three scripts in `evaluation\`.
+
+**1. Retrieval comparison** (`retrieval_experiments.py`, no LLM needed). This
+changes one search setting at a time (duplicate skipping, chunking, keyword
+vs vector vs hybrid search, embedding model, re-ranker). For each answerable
+question it checks where the evidence span appears in the search results:
+
+- **hit@5**: the share of questions whose evidence is in the top 5 chunks.
+- **MRR@5**: how high it ranks (1st = 1.0, 2nd = 0.5, 3rd ≈ 0.33, missing = 0).
+
+A chunk counts as correct if it contains the evidence span, so the numbers
+stay comparable when the chunking changes.
+
+**2. End-to-end** (`evaluate.py`). This runs every question through the
+pipeline and the LLM, then makes one judge call per answer:
+
+- **Correctness.** The judge compares the answer with the reference answer
+  and scores it 0–3: 3 = correct and complete, 2 = main fact right but a
+  detail missing, 1 = partly correct, 0 = wrong or wrongly says "not found".
+  A score of 2 or 3 counts as correct.
+- **Faithfulness.** The judge checks each sentence of the answer against the
+  chunk it cites. A sentence with no citation, or with a claim the chunk
+  doesn't state, is unsupported. This catches answers built from the model's
+  own knowledge instead of the label.
+- **Refusals.** Unanswerable questions should be refused. Answerable ones
+  should not be.
+- **Latency.** The time per question.
+
+The script also writes `spot_check_<label>.md`, with 10 random answers to
+score by hand. Comparing them with the judge shows whether the judge can be
+trusted.
+
+**3. Prompt-injection test** (`injection_test.py`). This adds poisoned
+documents containing instructions like "ignore previous instructions…" to the
+index, then asks questions that retrieve them. An attack succeeds if its
+payload shows up in the answer. Each attack is run against both the guarded
+prompt and the original prompt.
+
+#### Results
+
+These use `gemini-3.5-flash-lite` for both answering and judging. The
+original app is run with `--naive --chunking fixed --no-dedupe --mode vector`.
+
+| Metric | Original app | Current pipeline |
+|---|---:|---:|
+| Search finds the answer in the top 5 (hit@5) | 45% | **97.5%** |
+| Answers judged correct (score ≥ 2 of 3) | 55% | **97.5%** |
+| Says "not found" when the answer is in the label | 35% | **2.5%** |
+| Refuses questions the label can't answer | 10 / 10 | 10 / 10 |
+| Average latency per question | 9.8 s | 5.9 s |
+
+#### Run it
+
+Answering and judging go through an LLM API. The free Gemini tier is enough:
+about 2 calls per question. Set `GEMINI_API_KEY` first. Only the small
+embedding model runs locally, so a CPU-only laptop is fine.
+
+```powershell
+# 1. Retrieval comparison
+python -m evaluation.retrieval_experiments
+
+# 2. End-to-end, current pipeline vs the original app
+python -m evaluation.evaluate --label final --provider gemini --model gemini-3.5-flash-lite `
+  --mode hybrid --embedding e5-small --min-vector-score 0.80
+python -m evaluation.evaluate --label baseline --provider gemini --model gemini-3.5-flash-lite `
+  --naive --chunking fixed --no-dedupe --mode vector
+
+# 3. Prompt-injection test
+python -m evaluation.injection_test --provider gemini --model gemini-3.5-flash-lite
+```
+
+Each question is saved as soon as it finishes. If a run stops partway (crash,
+Ctrl-C or API quota), re-run the same command and it continues from the next
+question (`--fresh` starts over). Results are written to `evaluation\results\`.
+The summary is in [RESULTS.md](evaluation/results/RESULTS.md), and all options
+are in [documentation.md](documentation.md#offline-evaluation-retrieval-llm-as-judge-guardrails).
+
+**Caveats.**
+- The same model writes and judges the answers, which can inflate scores. The
+  spot-check sheet is there to test this.
+- 40 answerable questions from one label is a small sample: each question is
+  worth 2.5 points.
+- The questions borrow the label's wording, which favours keyword search. The
+  one miss shows the reverse: `q16`, "Who should not receive…?", shares no
+  words with the label's "contraindicated", so keyword search ranks the right
+  chunk too low.
 
 ---
 

@@ -1,0 +1,3861 @@
+[
+  {
+    "experiment": {
+      "name": "baseline",
+      "description": "Original: 500-char chunks, vector only, MiniLM, duplicate PDFs indexed",
+      "dedupe": false,
+      "chunking": "fixed",
+      "mode": "vector",
+      "reranker": null,
+      "embedding": "all-MiniLM-L6-v2"
+    },
+    "metrics": {
+      "hit@1": 0.45,
+      "hit@5": 0.45,
+      "mrr@5": 0.45,
+      "chunks": 654,
+      "avg_unique_in_top5": 1,
+      "index_build_s": 48.3,
+      "avg_query_ms": 18.7
+    },
+    "cases": [
+      {
+        "id": "q01",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.8389,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q02",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5388,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q03",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.453,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q04",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6955,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q05",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6791,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q06",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7536,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q07",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7414,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q08",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6557,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q09",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6667,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q10",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5974,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q11",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5715,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q12",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6983,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q13",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.627,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q14",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.4913,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q15",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.778,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q16",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7055,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q17",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7513,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q18",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7698,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q19",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5283,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q20",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7435,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q21",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.8608,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q22",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6904,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q23",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5484,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q24",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6022,
+        "best_rerank_score": null,
+        "top_pages": [
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q25",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.8238,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q26",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6959,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q27",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6372,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q28",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7881,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q29",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7053,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q30",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.8387,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q31",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7527,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q32",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.4222,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q33",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6439,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q34",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7976,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q35",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.654,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q36",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7305,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q37",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.4564,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q38",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.4856,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q39",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5281,
+        "best_rerank_score": null,
+        "top_pages": [
+          14,
+          14,
+          14,
+          14,
+          14
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "q40",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7661,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u01",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5919,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u02",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.618,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u03",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5797,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u04",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.64,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u05",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5949,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u06",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7099,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u07",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.645,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u08",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5405,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u09",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.3764,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "unique_top_chunks": 1
+      },
+      {
+        "id": "u10",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7166,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 1
+      }
+    ]
+  },
+  {
+    "experiment": {
+      "name": "dedupe",
+      "description": "+ skip byte-identical files",
+      "dedupe": true,
+      "chunking": "fixed",
+      "mode": "vector",
+      "reranker": null,
+      "embedding": "all-MiniLM-L6-v2"
+    },
+    "metrics": {
+      "hit@1": 0.45,
+      "hit@5": 0.8,
+      "mrr@5": 0.6091666666666666,
+      "chunks": 109,
+      "avg_unique_in_top5": 4.98,
+      "index_build_s": 4.0,
+      "avg_query_ms": 16.4
+    },
+    "cases": [
+      {
+        "id": "q01",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.8389,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q02",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5388,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          10,
+          13,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q03",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.453,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          4,
+          1,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q04",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6955,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          13,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q05",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6791,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q06",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7536,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          4,
+          11,
+          1,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q07",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.7414,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          4,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q08",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6557,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          5,
+          13,
+          1,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q09",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6667,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          5,
+          1,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q10",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5974,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          4,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q11",
+        "answerable": true,
+        "rank": 5,
+        "best_vector_score": 0.5715,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          3,
+          5,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q12",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6983,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          1,
+          13,
+          4,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q13",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.627,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          1,
+          7,
+          1,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q14",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.4913,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          5,
+          3,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q15",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.778,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          5,
+          1,
+          3,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q16",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7055,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          11,
+          1,
+          8,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q17",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.7513,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          1,
+          1,
+          11,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q18",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7698,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          6,
+          8,
+          6,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q19",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5283,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          7,
+          2,
+          16,
+          6
+        ],
+        "unique_top_chunks": 4
+      },
+      {
+        "id": "q20",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7435,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          1,
+          8,
+          6,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q21",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.8608,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          8,
+          11,
+          7,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q22",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6904,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          8,
+          7,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q23",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5484,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          7,
+          2,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q24",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6022,
+        "best_rerank_score": null,
+        "top_pages": [
+          8,
+          7,
+          8,
+          13,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q25",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.8238,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          8,
+          11,
+          8,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q26",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6959,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          12,
+          12,
+          13,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q27",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6372,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          8,
+          7,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q28",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7881,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          10,
+          9,
+          15,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q29",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7053,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          10,
+          10,
+          1,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q30",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.8387,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          9,
+          10,
+          9,
+          10
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q31",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7527,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          1,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q32",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.4222,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          1,
+          8,
+          2
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q33",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6439,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          11,
+          1,
+          12,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q34",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7976,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          12,
+          1,
+          12,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q35",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.654,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          1,
+          12,
+          1,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q36",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7305,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          7,
+          1,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q37",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.4564,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          12,
+          1,
+          5,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q38",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.4856,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          13,
+          11,
+          1,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q39",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.5281,
+        "best_rerank_score": null,
+        "top_pages": [
+          14,
+          13,
+          13,
+          13,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q40",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7661,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          16,
+          5,
+          15,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u01",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5919,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          13,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u02",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.618,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          3,
+          4,
+          1,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u03",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5797,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          13,
+          10,
+          5,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u04",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.64,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          7,
+          8,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u05",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5949,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          1,
+          1,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u06",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7099,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          13,
+          1,
+          1,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u07",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.645,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          3,
+          4,
+          4,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u08",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5405,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          8,
+          1,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u09",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.3764,
+        "best_rerank_score": null,
+        "top_pages": [
+          2,
+          7,
+          1,
+          8,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u10",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7166,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          4,
+          5,
+          4
+        ],
+        "unique_top_chunks": 5
+      }
+    ]
+  },
+  {
+    "experiment": {
+      "name": "structured",
+      "description": "+ heading-aware chunks, tables whole, drug/section/page metadata",
+      "dedupe": true,
+      "chunking": "structured",
+      "mode": "vector",
+      "reranker": null,
+      "embedding": "all-MiniLM-L6-v2"
+    },
+    "metrics": {
+      "hit@1": 0.575,
+      "hit@5": 0.9,
+      "mrr@5": 0.6933333333333332,
+      "chunks": 61,
+      "avg_unique_in_top5": 5,
+      "index_build_s": 3.5,
+      "avg_query_ms": 18.1
+    },
+    "cases": [
+      {
+        "id": "q01",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.792,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          3,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q02",
+        "answerable": true,
+        "rank": 5,
+        "best_vector_score": 0.4863,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          3,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q03",
+        "answerable": true,
+        "rank": 5,
+        "best_vector_score": 0.3678,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          3,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q04",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6532,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          4,
+          3,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q05",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6322,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          4,
+          4,
+          4,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q06",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7279,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          11,
+          16,
+          1,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q07",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6169,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          4,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q08",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6281,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          13,
+          11,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q09",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6096,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          13,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q10",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.5217,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          5,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q11",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6092,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          1,
+          6,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q12",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6544,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          5,
+          4,
+          4,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q13",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6461,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          12,
+          1,
+          8,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q14",
+        "answerable": true,
+        "rank": 4,
+        "best_vector_score": 0.3229,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          12,
+          5,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q15",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.7596,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          13,
+          5,
+          13,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q16",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6933,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          3,
+          7,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q17",
+        "answerable": true,
+        "rank": 4,
+        "best_vector_score": 0.7567,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          1,
+          3,
+          6,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q18",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.745,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          7,
+          6,
+          1,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q19",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4614,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          7,
+          1,
+          11,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q20",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.69,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          7,
+          1,
+          8,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q21",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7681,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          11,
+          4,
+          16,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q22",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6154,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          1,
+          15,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q23",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4076,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          1,
+          6,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q24",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.6483,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          8,
+          8,
+          16,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q25",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.807,
+        "best_rerank_score": null,
+        "top_pages": [
+          8,
+          16,
+          1,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q26",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7004,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          11,
+          1,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q27",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6459,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          8,
+          12,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q28",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.7334,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          14
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q29",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7472,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          13,
+          14,
+          16,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q30",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7906,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          9,
+          14,
+          14,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q31",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6753,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          3,
+          16,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q32",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4529,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          13,
+          1,
+          1,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q33",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6724,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          6,
+          11,
+          11,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q34",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7755,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          7,
+          3,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q35",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6697,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          1,
+          1,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q36",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7165,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          16,
+          12,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q37",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4141,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          5,
+          16,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q38",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5024,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          1,
+          11,
+          11,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q39",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5104,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          9,
+          5,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q40",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5979,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          5,
+          5,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u01",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5518,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u02",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5515,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          3,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u03",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5635,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          13,
+          1,
+          11,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u04",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.655,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          1,
+          5,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u05",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5906,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          1,
+          5,
+          13,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u06",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7213,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          13,
+          1,
+          1,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u07",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6385,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          3,
+          4,
+          6,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u08",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5248,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          1,
+          5,
+          1,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u09",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.3956,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          7,
+          7,
+          6,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u10",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6855,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          8,
+          1,
+          4,
+          5
+        ],
+        "unique_top_chunks": 5
+      }
+    ]
+  },
+  {
+    "experiment": {
+      "name": "bm25_only",
+      "description": "(reference) keyword search alone",
+      "dedupe": true,
+      "chunking": "structured",
+      "mode": "bm25",
+      "reranker": null,
+      "embedding": "all-MiniLM-L6-v2"
+    },
+    "metrics": {
+      "hit@1": 0.75,
+      "hit@5": 0.95,
+      "mrr@5": 0.8195833333333333,
+      "chunks": 61,
+      "avg_unique_in_top5": 4.98,
+      "index_build_s": 3.0,
+      "avg_query_ms": 17.9
+    },
+    "cases": [
+      {
+        "id": "q01",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.792,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          1,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q02",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4863,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          15,
+          1,
+          4,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q03",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.3678,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          4,
+          3,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q04",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.6532,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          3,
+          4,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q05",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.6322,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          4,
+          4,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q06",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7279,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          3,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q07",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6169,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          4,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q08",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6281,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          8,
+          8,
+          12
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q09",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6096,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          1,
+          4,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q10",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5217,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          1,
+          11,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q11",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6092,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          4,
+          3,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q12",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6544,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          12,
+          8,
+          13,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q13",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6461,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          1,
+          5,
+          13,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q14",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.3229,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          13,
+          5,
+          16,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q15",
+        "answerable": true,
+        "rank": 4,
+        "best_vector_score": 0.7596,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          1,
+          5,
+          5,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q16",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6933,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          5,
+          6,
+          12,
+          12
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q17",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.7567,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          6,
+          1,
+          1,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q18",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.745,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          7,
+          1,
+          1,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q19",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4614,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          1,
+          3,
+          1,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q20",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.69,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          6,
+          10,
+          9,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q21",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7681,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          8,
+          8,
+          7,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q22",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.6154,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          15,
+          7,
+          9,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q23",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4076,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          8,
+          9,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q24",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6483,
+        "best_rerank_score": null,
+        "top_pages": [
+          8,
+          1,
+          7,
+          7,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q25",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.807,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          8,
+          1,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q26",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7004,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          9,
+          13,
+          15,
+          14
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q27",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6459,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          3,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q28",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7334,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q29",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7472,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          1,
+          3,
+          1,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q30",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7906,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          14,
+          14,
+          9,
+          14
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q31",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6753,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          15,
+          11,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q32",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4529,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          15,
+          15,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q33",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6724,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          11,
+          1,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q34",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7755,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          3,
+          1,
+          9
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q35",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6697,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          6,
+          1,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q36",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7165,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          1,
+          11,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q37",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4141,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          1,
+          6,
+          5
+        ],
+        "unique_top_chunks": 4
+      },
+      {
+        "id": "q38",
+        "answerable": true,
+        "rank": 5,
+        "best_vector_score": 0.5024,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          6,
+          4,
+          3,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q39",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5104,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          5,
+          16,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q40",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5979,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          5,
+          5,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u01",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5518,
+        "best_rerank_score": null,
+        "top_pages": [
+          15,
+          3,
+          6,
+          4,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u02",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5515,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          4,
+          3,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u03",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5635,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          4,
+          1,
+          13,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u04",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.655,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          1,
+          5,
+          5,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u05",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5906,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          5,
+          5,
+          13,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u06",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7213,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          6,
+          11,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u07",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6385,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u08",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5248,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          12,
+          13,
+          15,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u09",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.3956,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          10,
+          12,
+          10,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u10",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6855,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          3,
+          6,
+          4
+        ],
+        "unique_top_chunks": 5
+      }
+    ]
+  },
+  {
+    "experiment": {
+      "name": "hybrid",
+      "description": "+ BM25 + vector fused with RRF",
+      "dedupe": true,
+      "chunking": "structured",
+      "mode": "hybrid",
+      "reranker": null,
+      "embedding": "all-MiniLM-L6-v2"
+    },
+    "metrics": {
+      "hit@1": 0.65,
+      "hit@5": 0.925,
+      "mrr@5": 0.775,
+      "chunks": 61,
+      "avg_unique_in_top5": 5,
+      "index_build_s": 3.3,
+      "avg_query_ms": 19.9
+    },
+    "cases": [
+      {
+        "id": "q01",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.792,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          3,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q02",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.4863,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          3,
+          4,
+          3,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q03",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.3678,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          3,
+          4,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q04",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6532,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          3,
+          6,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q05",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6322,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          1,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q06",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7279,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          11,
+          4,
+          15,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q07",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6169,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          4,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q08",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6281,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          8,
+          13,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q09",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6096,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          1,
+          4,
+          4,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q10",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5217,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          1,
+          16,
+          4
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q11",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6092,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          5,
+          1,
+          4,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q12",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6544,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          4,
+          8,
+          1,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q13",
+        "answerable": true,
+        "rank": 3,
+        "best_vector_score": 0.6461,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          12,
+          5,
+          1,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q14",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.3229,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          5,
+          1,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q15",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.7596,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          5,
+          3,
+          5,
+          12
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q16",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.6933,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          11,
+          5,
+          7,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q17",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.7567,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          6,
+          1,
+          11,
+          3
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q18",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.745,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          7,
+          1,
+          8,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q19",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4614,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          1,
+          3,
+          1,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q20",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.69,
+        "best_rerank_score": null,
+        "top_pages": [
+          6,
+          6,
+          8,
+          8,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q21",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7681,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          8,
+          8,
+          16,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q22",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6154,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          15,
+          1,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q23",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4076,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          7,
+          7,
+          1,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q24",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.6483,
+        "best_rerank_score": null,
+        "top_pages": [
+          1,
+          8,
+          7,
+          7,
+          8
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q25",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.807,
+        "best_rerank_score": null,
+        "top_pages": [
+          8,
+          11,
+          1,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q26",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7004,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          11,
+          13,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q27",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6459,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          1,
+          11,
+          7,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q28",
+        "answerable": true,
+        "rank": 2,
+        "best_vector_score": 0.7334,
+        "best_rerank_score": null,
+        "top_pages": [
+          9,
+          9,
+          9,
+          9,
+          10
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q29",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7472,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          3,
+          12,
+          5,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q30",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7906,
+        "best_rerank_score": null,
+        "top_pages": [
+          10,
+          14,
+          9,
+          14,
+          14
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q31",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6753,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          3,
+          1,
+          11,
+          16
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q32",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4529,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          3,
+          15,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q33",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6724,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          6,
+          1,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q34",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7755,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          3,
+          1,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q35",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.6697,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          1,
+          6,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q36",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.7165,
+        "best_rerank_score": null,
+        "top_pages": [
+          11,
+          11,
+          3,
+          11,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q37",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.4141,
+        "best_rerank_score": null,
+        "top_pages": [
+          12,
+          5,
+          1,
+          16,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q38",
+        "answerable": true,
+        "rank": null,
+        "best_vector_score": 0.5024,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          1,
+          4,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q39",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5104,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          5,
+          5,
+          9,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "q40",
+        "answerable": true,
+        "rank": 1,
+        "best_vector_score": 0.5979,
+        "best_rerank_score": null,
+        "top_pages": [
+          16,
+          5,
+          5,
+          5,
+          15
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u01",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5518,
+        "best_rerank_score": null,
+        "top_pages": [
+          3,
+          4,
+          4,
+          4,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u02",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5515,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          3,
+          4,
+          6
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u03",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5635,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          11,
+          13,
+          1,
+          11
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u04",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.655,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          16,
+          3,
+          5,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u05",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5906,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          13,
+          6,
+          16,
+          12
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u06",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.7213,
+        "best_rerank_score": null,
+        "top_pages": [
+          13,
+          11,
+          1,
+          3,
+          1
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u07",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6385,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          4,
+          6,
+          3,
+          13
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u08",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.5248,
+        "best_rerank_score": null,
+        "top_pages": [
+          5,
+          11,
+          1,
+          6,
+          5
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u09",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.3956,
+        "best_rerank_score": null,
+        "top_pages": [
+          7,
+          10,
+          1,
+          9,
+          7
+        ],
+        "unique_top_chunks": 5
+      },
+      {
+        "id": "u10",
+        "answerable": false,
+        "rank": null,
+        "best_vector_score": 0.6855,
+        "best_rerank_score": null,
+        "top_pages": [
+          4,
+          3,
+          13,
+          4,
+          1
+        ],
+        "unique_top_chunks": 5
+      }
+    ]
+  }
+]

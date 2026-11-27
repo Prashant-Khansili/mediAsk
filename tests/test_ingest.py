@@ -48,11 +48,11 @@ class IngestTests(unittest.TestCase):
                 pass
 
             import rag.ingest as ingest
-            original_embeddings = ingest.HuggingFaceEmbeddings
+            original_embeddings = ingest.PrefixedSentenceEmbeddings
             original_faiss = ingest.FAISS
             try:
-                ingest.HuggingFaceEmbeddings = (
-                    lambda model_name: FakeEmbeddings()
+                ingest.PrefixedSentenceEmbeddings = (
+                    lambda model_name=None: FakeEmbeddings()
                 )
 
                 class FakeVectorStore:
@@ -64,7 +64,7 @@ class IngestTests(unittest.TestCase):
                     (),
                     {
                         "from_documents": staticmethod(
-                            lambda chunks, embeddings: FakeVectorStore()
+                            lambda chunks, embeddings, **kwargs: FakeVectorStore()
                         )
                     },
                 )
@@ -73,7 +73,7 @@ class IngestTests(unittest.TestCase):
                     index_dir,
                 )
             finally:
-                ingest.HuggingFaceEmbeddings = original_embeddings
+                ingest.PrefixedSentenceEmbeddings = original_embeddings
                 ingest.FAISS = original_faiss
 
             self.assertTrue(index_dir.is_dir())

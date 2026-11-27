@@ -95,7 +95,7 @@ def ask_question(
             provider=llm_provider,
             model=llm_model,
             api_key=llm_api_key,
-        ).invoke({"query": q.query.strip()})
+        ).answer(q.query.strip())
     except (ConnectionError, TimeoutError) as exc:
         logger.exception("The local language model could not be reached")
         raise HTTPException(
@@ -113,8 +113,14 @@ def ask_question(
         ) from exc
 
     return {
-        "answer": result["result"],
-        "sources": [
-            doc.page_content for doc in result.get("source_documents", [])
+        "answer": result["answer"],
+        "refused": result["refused"],
+        "refusal_reason": result["refusal_reason"],
+        "disclaimer": result["disclaimer"],
+        "unsupported_sentences": result["unsupported_sentences"],
+        "sources": [source["text"] for source in result["sources"]],
+        "citations": [
+            {key: source[key] for key in ("id", "drug", "section", "page", "source")}
+            for source in result["sources"]
         ],
     }
