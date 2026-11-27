@@ -1,12 +1,4 @@
----
-title: MediAsk
-emoji: 🩺
-colorFrom: blue
-colorTo: green
-sdk: docker
-app_port: 7860
-pinned: false
----
+
 
 https://github.com/user-attachments/assets/c568f253-67b6-482c-bc1d-8e2e17d25df7
 
